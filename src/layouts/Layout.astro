@@ -21,30 +21,25 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+	
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--bg:#ffffff;
+		--accent-primary:#38CB89;
+		--accent-secondary:#000000;
+		--neutral-01: #FEFEFE;
+		--neutral-02: #F3f5f7;
+		--neutral-03: #E8ECEF;
+		--neutral-04: #6C7275;
+		--neutral-05: #343839;
+		--neutral-06: #232727;
+    --neutral-07: #141718;
+		--text-primary:#121212;
 	}
+	
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+		font-family: "Poppins",system-ui, sans-serif;
+		background: var(--bg);
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+
 </style>

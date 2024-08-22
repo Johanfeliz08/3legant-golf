@@ -1,14 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/NavBar.astro";
+import NotificationBar from "../components/NotificationBar.astro";
+import Welcome from "../components/Welcome.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		
+<Layout title="3legant">
+
+  <header>
+    <NotificationBar />
+    <NavBar />
+  </header>
+
+  <main>
+  	<Welcome/>
 	</main>
+
+  <footer>
+    <Footer />
+  </footer>
+
 </Layout>
 
-<style>
-	
-</style>
+<style></style>
