@@ -1,0 +1,30 @@
+---
+
+import ticketIcon from "../../public/icons/ticket-percent.svg";
+import rightArrow from "../../public/icons/arrow-right.svg";
+import closeIcon from "../../public/icons/close.svg";
+---
+
+<section class="notificationBar bg-accent-primary w-full p-2 flex flex-row ">
+
+  <div class="content flex flex-row justify-center items-center gap-3 w-full">
+    <div class="icon">
+      <img class="size-7" src={ticketIcon.src} alt="TicketIcon" aria-hidden="true">
+    </div>
+    <div class="message font-bold">
+      <span>30% off storewide — Limited time!</span>
+    </div>
+    <div class="calltoaction">
+      <a href="" class="flex flex-row font-medium border-black border-solid border-b-2">
+        <span>Shop Now</span>
+        <img src={rightArrow.src} alt="RightArrow" aria-hidden="true">
+      </a>
+    </div>
+  </div>
+
+  <div class="closebtn flex ">
+    <img class="size-6" src={closeIcon.src} alt="">
+  </div>
+  
+
+</section>

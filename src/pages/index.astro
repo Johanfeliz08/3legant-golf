@@ -1,20 +1,37 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import NavBar from "../components/NavBar.astro";
-import NotificationBar from "../components/NotificationBar.astro";
-import Welcome from "../components/Welcome.astro";
-import Footer from "../components/Footer.astro";
+
+import NavBar from "@/components/NavBar.astro";
+import NotificationBar from "@/components/NotificationBar.astro";
+import Welcome from "@/components/Welcome.astro";
+
+import ProductCaraousel from "@/components/ProductCaraousel.astro";
+import Categories from "@/components/Categories.astro";
+import LimitedEditionBanner from "@/components/LimitedEditionBanner.astro";
+import ShopCollection from "@/components/ShopCollection.astro";
+import LatestArticles from "@/components/LatestArticles.astro";
+import Newsletter from "@/components/Newsletter.astro";
+import Newsfeed from "@/components/Newsfeed.astro";
+
+import Footer from "@/components/Footer.astro";
 ---
 
 <Layout title="3legant">
 
-  <header>
+  <header class="h-screen">
     <NotificationBar />
     <NavBar />
+		<Welcome/>
   </header>
 
   <main>
-  	<Welcome/>
+		<ProductCaraousel/>
+		<Categories/>
+		<LimitedEditionBanner/>
+		<ShopCollection/>
+		<LatestArticles/>
+		<Newsletter/>
+		<Newsfeed/>
 	</main>
 
   <footer>
