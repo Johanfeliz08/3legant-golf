@@ -1,0 +1,100 @@
+
+  {
+
+    "items":[
+      {
+        "id":1,
+        "image":"src/assets/images/item-images/glove1.png",
+        "name":"glove1",
+        "rating":5,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":10,
+        "isNew":true,
+        "isHot":true,
+        "hasDiscount":true,
+        "discount":50,
+        "category_id":null
+
+      },
+      {
+        "id":2,
+        "image":"src/assets/images/item-images/glove2.png",
+        "name":"glove2",
+        "rating":5,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "isNew":false,
+        "isHot":false,
+        "hasDiscount":false,
+        "discount":0,
+        "category_id":null
+      },
+      {
+        "id":3,
+        "image":"src/assets/images/item-images/shoes1.png",
+        "name":"shoes1",
+        "rating":5,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "isNew":false,
+        "isHot":true,
+        "hasDiscount":false,
+        "discount":0,
+        "category_id":null
+      },
+      {
+        "id":4,
+        "image":"src/assets/images/item-images/stickbag.png",
+        "name":"stickbag",
+        "rating":5,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "isNew":false,
+        "isHot":false,
+        "hasDiscount":true,
+        "discount":0,
+        "category_id":null
+      },
+      {
+        "id":5,
+        "image":"src/assets/images/item-images/t-shirt1.png",
+        "name":"t-shirt1",
+        "rating":5,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "isNew":false,
+        "isHot":false,
+        "hasDiscount":false,
+        "discount":0,
+        "category_id":null
+      },
+      {
+        "id":6,
+        "image":"src/assets/images/item-images/t-shirt1.png",
+        "name":"t-shirt1",
+        "rating":5,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "isNew":false,
+        "isHot":true,
+        "hasDiscount":false,
+        "discount":0,
+        "category_id":null
+      },
+      {
+        "id":7,
+        "image":"src/assets/images/item-images/t-shirt1.png",
+        "name":"t-shirt1",
+        "rating":5,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "isNew":false,
+        "isHot":false,
+        "hasDiscount":false,
+        "discount":0,
+        "category_id":null
+      }
+
+    ]
+
+  }

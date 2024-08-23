@@ -6,7 +6,7 @@ import NavBar from "@/components/NavBar.jsx";
 import NotificationBar from "@/components/NotificationBar.astro";
 import Welcome from "@/components/Welcome.astro";
 
-import ProductCaraousel from "@/components/ProductCaraousel.astro";
+import ProductCaraousel from "@/components/ProductCaraousel.jsx";
 import Categories from "@/components/Categories.astro";
 import LimitedEditionBanner from "@/components/LimitedEditionBanner.astro";
 import ShopCollection from "@/components/ShopCollection.astro";
@@ -19,14 +19,14 @@ import Footer from "@/components/Footer.astro";
 
 <Layout title="3legant">
 
-  <header class="flex flex-col h-svh w-full">
+  <header class="flex flex-col min-h-[1200px] h-screen max-h-screen w-full">
     <NotificationBar />
     <NavBar client:load />
 		<Welcome/>
   </header>
 
-  <main class="flex flex-col w-full">
-		<ProductCaraousel/>
+  <main class="flex flex-col min-h-[800px] w-full">
+		<ProductCaraousel client:load/>
 		<Categories/>
 		<LimitedEditionBanner/>
 		<ShopCollection/>
@@ -42,5 +42,7 @@ import Footer from "@/components/Footer.astro";
 </Layout>
 
 <style>
+
+
 	
 </style>
