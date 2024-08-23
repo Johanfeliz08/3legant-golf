@@ -15,7 +15,7 @@ const ProductCaraousel = () => {
 
   return (
     <>
-    <section className="flex flex-col gap-y-9 carousel-container min-h-[800px] pl-28 py-16">
+    <section className="flex flex-col gap-y-9 carousel-container min-h-[850px] pl-28 py-16">
 
     <header className="section-header flex flex-row justify-between items-center pr-44">
       <div className="section-title">
@@ -30,7 +30,7 @@ const ProductCaraousel = () => {
 
     </header>
 
-    <div className="scroller flex flex-row gap-x-12 w-full h-[500px] overflow-hidden">
+    <div className="scroller flex flex-row gap-x-12 w-full h-[550px] overflow-hidden">
 
       {
         itemsData.map((item) => {

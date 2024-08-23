@@ -1,0 +1,8 @@
+.addtocartbnt {
+  transition: all ease 500ms;
+}
+
+.item-card:hover .addtocartbnt {
+  opacity: 1;
+  transition: all ease 500ms;
+}

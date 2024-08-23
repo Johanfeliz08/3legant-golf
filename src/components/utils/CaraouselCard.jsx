@@ -14,20 +14,13 @@ const CaraouselCard = ({id,image,name,rating,description,price,isHot,hasDiscount
           *
         </span>
       ));
-
-      // } else {
-      //   return (
-      //   <span className="text-2xl font-light">
-      //     *****
-      //   </span>
-      //   )
       }
     }
   
   
   return (
     <>
-      <article className="item-card max-w-72 h-full max-h-full">
+      <article className="item-card max-w-72 h-full max-h-full px-2 py-4 border-solid border border-neutral-01 transition-all hover:border-solid hover:border hover:border-accent-secondary">
         <div className="item-container flex justify-center relative items-center h-18 max-h-22 aspect-square bg-neutral-03">
           <div className="states absolute top-0 left-0 flex flex-col gap-y-1 p-2 max-w-20">
             
@@ -46,7 +39,7 @@ const CaraouselCard = ({id,image,name,rating,description,price,isHot,hasDiscount
           <img src={image} alt={`${name} imagen`} className="h-fit w-fit" />
 
           <div className="addtocart w-full h-16 rounded-lg absolute bottom-0 px-2 py-2">
-            <button className="bg-accent-secondary text-neutral-01 w-full h-full rounded-lg">
+            <button className="addtocartbnt bg-accent-secondary text-neutral-01 w-full h-full rounded-lg opacity-0">
               Add to cart
             </button>
           </div>
