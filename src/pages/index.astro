@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import NavBar from "@/components/NavBar.astro";
+// import NavBar from "@/components/NavBar.astro";
+import NavBar from "@/components/NavBar.jsx";
 import NotificationBar from "@/components/NotificationBar.astro";
 import Welcome from "@/components/Welcome.astro";
 
@@ -20,7 +21,7 @@ import Footer from "@/components/Footer.astro";
 
   <header class="h-screen">
     <NotificationBar />
-    <NavBar />
+    <NavBar client:load />
 		<Welcome/>
   </header>
 

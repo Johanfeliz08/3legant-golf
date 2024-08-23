@@ -1,0 +1,74 @@
+
+  /* Responsive design */
+
+  /* Small screen size */
+  @media (max-width:768px) {
+
+    .navbar {
+      justify-content:space-between;
+    }
+
+    .hambugermenu {
+
+      display: flex;
+
+    }
+
+    .bag-icon, .cart-items-count-icon {
+      width: 2rem;
+      height: auto;
+    }
+
+    .navitems {
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      position: absolute;
+      right: 0;
+      top: 7.6rem;
+      padding:1rem 0;
+      background-color: var(--bg);
+      border-left: 1px rgb(190, 190, 190) solid;
+      height:100svh;
+      width: 12rem;
+      gap:1.5rem;
+    }
+
+    .search, .user-account {
+      display: none;
+    }
+
+    /* Hover effect */
+
+    .navitems li{
+      width: 100%;
+    }
+    
+    .navitems > li > a {
+      display: flex;
+      justify-content: start;
+      width: 100%;
+      padding: 0.5rem 1rem ;
+      transition: ease 500ms;
+    }
+    
+    .navitems li a:hover {
+    
+    background-color: var(--accent-primary);
+    
+    }
+
+
+  }
+
+  /* Medium screen size */
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+
+    .navitems {
+      gap: 1rem;
+    }
+
+
+
+  } 
