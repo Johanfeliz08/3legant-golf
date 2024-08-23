@@ -19,13 +19,13 @@ import Footer from "@/components/Footer.astro";
 
 <Layout title="3legant">
 
-  <header class="h-screen">
+  <header class="flex flex-col h-svh w-full">
     <NotificationBar />
     <NavBar client:load />
 		<Welcome/>
   </header>
 
-  <main>
+  <main class="flex flex-col w-full">
 		<ProductCaraousel/>
 		<Categories/>
 		<LimitedEditionBanner/>
@@ -41,4 +41,6 @@ import Footer from "@/components/Footer.astro";
 
 </Layout>
 
-<style></style>
+<style>
+	
+</style>

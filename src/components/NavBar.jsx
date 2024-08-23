@@ -8,7 +8,7 @@ const NavBar = () => {
 
 
   return (
-    <nav className="navbar flex flex-row justify-between items-center px-14 py-5 border-b border-solid border-black">
+    <nav className="navbar flex flex-row justify-between items-center px-14 py-5">
 
       <div className="flex flex-row justify-center items-center gap-1">
         <div className="hambugermenu hidden">

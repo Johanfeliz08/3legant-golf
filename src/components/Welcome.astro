@@ -1,6 +1,103 @@
 ---
-
-
+import image from "@/assets/images/golfstickstransparent2.png";
 ---
 
-<h1 class="text-black">Welcome section</h1>
+<section
+  class="home-section flex md:flex-row justify-center items-center bg-[#121212] h-full w-full max-h-screen max-w-screen"
+>
+  <div class="content flex flex-col w-full max-w-[40%] max-h-full gap-6 py-5">
+    <h1
+      class="home-title text-[#ffffff] md:text-left md:text-6xl lg:text-7xl font-semibold"
+    >
+      <span>More than</span>
+      <br /> just a game. <br />
+      <span>It's a lifestyle.</span>
+    </h1>
+    <p class="home-p text-[#ffffff] md:text-lg md:max-w-[80%]">
+      Whether you’re just starting out, have played your whole life or you're a
+      Tour pro, your swing is like a fingerprint.
+    </p>
+    <a
+      href=""
+      class="bg-accent-primary p-4 rounded-md w-56 text-center font-medium hover:bg-neutral-01 transition-colors"
+      >Shopping Now
+    </a>
+  </div>
+
+  <div class="image-container md:h-full md:w-auto">
+    <img src={image.src} alt="" class="image md:h-[70%] md:w-full md:aspect-auto lg:h-[85%]" />
+  </div>
+</section>
+
+<style>
+    
+  .home-section {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(18, 18, 18, 1) 100%
+    );
+  }
+
+  span {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #fff 16.06%,
+      #fff 86.9%,
+      rgba(255, 255, 255, 0) 106.25%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Responsive design */
+
+  /* Small screen size */
+  @media (max-width: 768px) {
+
+    .home-section {
+      max-height: none;
+      height: fit-content;
+      flex-direction: column-reverse;
+    }
+
+    .image-container {
+      height: 60%;
+      max-height: 60%;
+    }
+
+    .image-container .image {
+      height: 80%;
+    }
+
+    .content {
+      justify-content: center;
+      align-items: center;
+      height: 40%;
+      max-height:40%;
+      padding: 1rem 2rem ;
+      min-width: 30rem;
+
+    }
+
+    .home-title {
+      font-size: 2.5rem;
+    }
+
+    .home-p {
+      max-width: 70%;
+    }
+  }
+
+  /* Medium screen size */
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+
+  }
+
+
+
+</style>

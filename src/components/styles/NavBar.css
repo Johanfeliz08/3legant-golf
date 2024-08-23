@@ -19,7 +19,9 @@
       height: auto;
     }
 
+
     .navitems {
+      z-index: 50;
       flex-direction: column;
       justify-content: start;
       align-items: start;
@@ -29,9 +31,10 @@
       padding:1rem 0;
       background-color: var(--bg);
       border-left: 1px rgb(190, 190, 190) solid;
-      height:100svh;
       width: 12rem;
       gap:1.5rem;
+      height:100%;
+      max-height: none;
     }
 
     .search, .user-account {
