@@ -13,3 +13,21 @@ border: 1px red solid;
   border: 1px aqua solid;
 
 } */
+
+/* Avoid the content can be selected*/
+.scroller,
+.scroller-item {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE10+/Edge */
+}
+
+/* Change the mouse cursor when the user is draggin */
+
+.scroller {
+  cursor: grab;
+}
+
+.scroller.dragging {
+  cursor: grabbing;
+}
