@@ -42,3 +42,11 @@ border: 1px red solid;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* Pagination styles */
+
+.dot-active {
+  border: black 1px solid;
+  border-radius: 100%;
+  padding: 3px;
+}

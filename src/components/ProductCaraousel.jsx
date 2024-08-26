@@ -1,20 +1,21 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "@/components/styles/ProductCaraousel.css";
 import CaraouselCard from "./utils/CaraouselCard";
 import MockData from "@/components/utils/MockData.json";
 
 const ProductCaraousel = () => {
-
+  
   // Data
 
   const itemsData = Object.values(MockData.items);
 
-  //  Slide functionality 
+  //  Slide functionality with the mouse 
 
   const scrollerRef = useRef(null); // Get the scroller component after the dom is rendered
   const [isDragging, setIsDragging] = useState(false); // Manage the state
   const [startX, setStartX] = useState(0); // Store the initial position of the mouse
   const [scrollLeft, setScrollLeft] = useState(0); //  Store the initial position of the horizontal scrollbar
+  const [scrollPercentage, setScrollPercentage] = useState(0);
 
   const handleMouseDown = (e) => { // Mouse click is pressed
     setIsDragging(true); // Set the state to true
@@ -23,7 +24,7 @@ const ProductCaraousel = () => {
   };
 
   const handleMouseMove = (e) => { // Mouse is moving
-    if (isDragging) { // Managing the event with the state 
+    if (isDragging) { // Managing the event with the state
       e.preventDefault();
       const x = e.pageX - scrollerRef.current.offsetLeft; // Get the final position of the mouse in reference of the scroller container
       const walk = (x - startX) * 1.5; // Calculate the displacement of the mouse by subtracting the final position and the initial position - Multiply by 1.5 increase the speed of the scroll
@@ -38,14 +39,68 @@ const ProductCaraousel = () => {
   // Scroll functionality
 
   const handleScroll = (e) => {
-
+    
     if (scrollerRef.current) { // Make sure the scroller container is rendered in the dom
 
       scrollerRef.current.scrollLeft += e.deltaY; // Get the current position of the horizontal scrollbar of the scroller element and adds the vertical scroll movement - Converting the vertical scroll movement of the mouse wheel to horizontal scroll movement
-    
-    }
 
-  }
+      const maxScrollLeft = scrollerRef.current.scrollWidth; // Get the total amount of scroll posible in the scroller component
+      const currentScrollLeft = scrollerRef.current.scrollLeft; // Set the current position of the horizontal scroll
+      const scrollPerc = (currentScrollLeft / maxScrollLeft) * 100; // Calculate the % dividing the curren position by the total and multiplying by 100
+      setScrollPercentage(scrollPerc);
+    }
+  };
+
+  const handlePagination = () => {
+    const pagQuantity = Math.ceil(itemsData.length / 5); // Render a pagination item for each 5 products, using Math.Ceil to manage decimals.
+
+    if (pagQuantity > 0) {
+      return Array.from({ length: pagQuantity },(_,i ) => { // This returns an array which has the calculated amount of element, ex: if pagQuantity = 2, will render 2 times the component
+        
+        // This is a loop, therefore has an index, the index is base on the amount of element, if we want to calculate the % base on the element we just:  
+        /* Dividing the index by the total of elements we get the min %
+        but if we add 1 to the index, we get the max, and because is a loop it will increase until the max amount of elements that we are rendering */
+        const minPercentage = (i / pagQuantity) * 100; 
+        const maxPercentage = ((i + 1) / pagQuantity) * 100;
+        const isActive = scrollPercentage >= minPercentage && scrollPercentage < maxPercentage;
+          
+          return ( <span key={i}>
+            <svg
+               className={`dot size-4 p-[3px] ${isActive ? "dot-active" : ""}`}
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#000000"
+              strokeWidth="0.27"
+            >
+              <g id="SVGRepo_bgCarrier" strokeWidth="0">
+                <rect
+                  x="0"
+                  y="0"
+                  width="15"
+                  height="15"
+                  rx="7.5"
+                  fill="#000000"
+                  strokeWidth="0"
+                />
+              </g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M9.875 7.5C9.875 8.81168 8.81168 9.875 7.5 9.875C6.18832 9.875 5.125 8.81168 5.125 7.5C5.125 6.18832 6.18832 5.125 7.5 5.125C8.81168 5.125 9.875 6.18832 9.875 7.5Z"
+                  fill="#000000"
+                />
+              </g>
+            </svg>
+          </span>)
+        }
+      );
+    }
+  };
 
   return (
     <section className="flex flex-col gap-y-9 carousel-container min-h-[850px] pl-28 py-16">
@@ -54,99 +109,7 @@ const ProductCaraousel = () => {
           <h2 className="text-4xl font-medium">Featured</h2>
         </div>
         <div className="pagination flex flex-row gap-1">
-          <svg
-            className="size-4 border border-solid border-accent-secondary rounded-full p-[3px]"
-            viewBox="0 0 15 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#000000"
-            strokeWidth="0.27"
-          >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0">
-              <rect
-                x="0"
-                y="0"
-                width="15"
-                height="15"
-                rx="7.5"
-                fill="#000000"
-                strokeWidth="0"
-              />
-            </g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M9.875 7.5C9.875 8.81168 8.81168 9.875 7.5 9.875C6.18832 9.875 5.125 8.81168 5.125 7.5C5.125 6.18832 6.18832 5.125 7.5 5.125C8.81168 5.125 9.875 6.18832 9.875 7.5Z"
-                fill="#000000"
-              />
-            </g>
-          </svg>
-          <svg
-            className="size-4 border border-solid border-accent-secondary rounded-full p-[3px]"
-            viewBox="0 0 15 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#000000"
-            strokewidth="0.27"
-          >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0">
-              <rect
-                x="0"
-                y="0"
-                width="15"
-                height="15"
-                rx="7.5"
-                fill="#000000"
-                strokeWidth="0"
-              />
-            </g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M9.875 7.5C9.875 8.81168 8.81168 9.875 7.5 9.875C6.18832 9.875 5.125 8.81168 5.125 7.5C5.125 6.18832 6.18832 5.125 7.5 5.125C8.81168 5.125 9.875 6.18832 9.875 7.5Z"
-                fill="#000000"
-              />
-            </g>
-          </svg>
-          <svg
-            className="size-4 border border-solid border-accent-secondary rounded-full p-[3px]"
-            viewBox="0 0 15 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#000000"
-            strokeWidth="0.27"
-          >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0">
-              <rect
-                x="0"
-                y="0"
-                width="15"
-                height="15"
-                rx="7.5"
-                fill="#000000"
-                strokeWidth="0"
-              />
-            </g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M9.875 7.5C9.875 8.81168 8.81168 9.875 7.5 9.875C6.18832 9.875 5.125 8.81168 5.125 7.5C5.125 6.18832 6.18832 5.125 7.5 5.125C8.81168 5.125 9.875 6.18832 9.875 7.5Z"
-                fill="#000000"
-              />
-            </g>
-          </svg>
+          {handlePagination()}
         </div>
       </header>
 
@@ -159,9 +122,7 @@ const ProductCaraousel = () => {
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
-
         onWheel={handleScroll}
-
       >
         {itemsData.map((item) => (
           <div
