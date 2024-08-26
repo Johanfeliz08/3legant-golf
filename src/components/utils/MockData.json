@@ -93,6 +93,45 @@
         "hasDiscount":false,
         "discount":0,
         "category_id":null
+      },
+      {
+        "id":8,
+        "image":"src/assets/images/item-images/shoes1.png",
+        "name":"shoes1",
+        "rating":3,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "isNew":false,
+        "isHot":true,
+        "hasDiscount":false,
+        "discount":0,
+        "category_id":null
+      },
+      {
+        "id":9,
+        "image":"src/assets/images/item-images/shoes1.png",
+        "name":"shoes1",
+        "rating":3,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "isNew":false,
+        "isHot":true,
+        "hasDiscount":false,
+        "discount":0,
+        "category_id":null
+      },
+      {
+        "id":10,
+        "image":"src/assets/images/item-images/shoes1.png",
+        "name":"shoes1",
+        "rating":3,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "isNew":false,
+        "isHot":true,
+        "hasDiscount":false,
+        "discount":0,
+        "category_id":null
       }
 
     ]

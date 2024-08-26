@@ -4,7 +4,7 @@ import CaraouselCard from "./utils/CaraouselCard";
 import MockData from "@/components/utils/MockData.json";
 
 const ProductCaraousel = () => {
-  
+
   // Data
 
   const itemsData = Object.values(MockData.items);
@@ -44,7 +44,7 @@ const ProductCaraousel = () => {
 
       scrollerRef.current.scrollLeft += e.deltaY; // Get the current position of the horizontal scrollbar of the scroller element and adds the vertical scroll movement - Converting the vertical scroll movement of the mouse wheel to horizontal scroll movement
 
-      const maxScrollLeft = scrollerRef.current.scrollWidth; // Get the total amount of scroll posible in the scroller component
+      const maxScrollLeft = scrollerRef.current.scrollWidth - scrollerRef.current.clientWidth; // Get the total amount of scroll posible in the scroller component
       const currentScrollLeft = scrollerRef.current.scrollLeft; // Set the current position of the horizontal scroll
       const scrollPerc = (currentScrollLeft / maxScrollLeft) * 100; // Calculate the % dividing the curren position by the total and multiplying by 100
       setScrollPercentage(scrollPerc);
@@ -62,7 +62,7 @@ const ProductCaraousel = () => {
         but if we add 1 to the index, we get the max, and because is a loop it will increase until the max amount of elements that we are rendering */
         const minPercentage = (i / pagQuantity) * 100; 
         const maxPercentage = ((i + 1) / pagQuantity) * 100;
-        const isActive = scrollPercentage >= minPercentage && scrollPercentage < maxPercentage;
+        const isActive = scrollPercentage >= minPercentage && scrollPercentage <= maxPercentage;
           
           return ( <span key={i}>
             <svg
@@ -103,19 +103,19 @@ const ProductCaraousel = () => {
   };
 
   return (
-    <section className="flex flex-col gap-y-9 carousel-container min-h-[850px] pl-28 py-16">
-      <header className="section-header flex flex-row justify-between items-center pr-44">
+    <section className="flex flex-col items-end gap-y-9 carousel-container min-h-[850px] pl-28 py-8 w-full">
+      <header className="section-header flex flex-row justify-between items-center w-full min-w-full">
         <div className="section-title">
           <h2 className="text-4xl font-medium">Featured</h2>
         </div>
-        <div className="pagination flex flex-row gap-1">
+        <div className="pagination flex flex-row gap-1 md:pr-44">
           {handlePagination()}
         </div>
       </header>
 
       <div
         ref={scrollerRef}
-        className={`scroller overscroll-none flex flex-row gap-x-12 w-full h-[550px] overflow-scroll  ${
+        className={`scroller overscroll-none flex flex-row gap-x-12 w-full h-[550px] overflow-scroll ${
           isDragging ? "dragging" : null
         }`}
         onMouseDown={handleMouseDown}

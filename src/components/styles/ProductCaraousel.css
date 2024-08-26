@@ -1,52 +1,56 @@
-/* .carousel-container {
 
-border: 1px red solid;
+  /* Avoid the content can be selected*/
+  .scroller,
+  .scroller-item {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE10+/Edge */
+  }
 
-}
+  /* Change the mouse cursor when the user is dragging */
 
-.scroller {
-  border: 1px blue solid;
-} */
+  .scroller {
+    cursor: grab;
+  }
 
-/* .section-header{
+  .scroller.dragging {
+    cursor: grabbing;
+  }
 
-  border: 1px aqua solid;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scroller::-webkit-scrollbar {
+    display: none;
+  }
 
-} */
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scroller {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
-/* Avoid the content can be selected*/
-.scroller,
-.scroller-item {
-  user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE10+/Edge */
-}
+  /* Pagination styles */
 
-/* Change the mouse cursor when the user is dragging */
+  .dot-active {
+    border: black 1px solid;
+    border-radius: 100%;
+    padding: 3px;
+  }
 
-.scroller {
-  cursor: grab;
-}
+  /* Responsive design */
 
-.scroller.dragging {
-  cursor: grabbing;
-}
+  /* Small screen size */
+  @media (max-width:768px) {
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.scroller::-webkit-scrollbar {
-  display: none;
-}
+    .pagination {
+      padding-right: 3rem;
+    }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.scroller {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+  }
 
-/* Pagination styles */
+  /* Medium screen size */
+  @media (min-width: 768px) and (max-width: 1024px) {
 
-.dot-active {
-  border: black 1px solid;
-  border-radius: 100%;
-  padding: 3px;
-}
+
+
+
+  } 
