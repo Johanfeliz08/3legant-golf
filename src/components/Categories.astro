@@ -1,0 +1,28 @@
+---
+import MockData from "@/components/utils/MockData.json";
+
+const data = Object.values(MockData.categories);
+
+console.log(data);
+---
+
+<section class="categories flex flex-col justify-center items-center w-full h-full min-h-[800px]">
+  <header class="categories-header text-accent-secondary py-10">
+    <h2 class="text-4xl">Shop by Categories</h2>
+  </header>
+
+  <div class="categories-container grid grid-cols-3 grid-rows-2 gap-x-5 gap-y-10">
+    {
+      data.map((category) => (
+        <a href="">
+        <article class="flex flex-col justify-center items-center">
+          <div class="image-container bg-neutral-03">
+            <img src={category.image} alt={`${category.name} + image`}>
+          </div>
+          <h3 class="text-accent-secondary p-5">{category.name}</h3>
+        </article>
+        </a>
+      ))
+    }
+  </div>
+</section>

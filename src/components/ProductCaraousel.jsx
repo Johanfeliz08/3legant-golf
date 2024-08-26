@@ -66,11 +66,10 @@ const ProductCaraousel = () => {
           
           return ( <span key={i}>
             <svg
-               className={`dot size-4 p-[3px] ${isActive ? "dot-active" : ""}`}
+              className={`dot size-4 p-[3px] border border-solid border-[rgba(0,0,0,0)] rounded-full stroke-neutral-04 fill-neutral-04 transition-all ${isActive ? "dot-active" : ""}`}
               viewBox="0 0 15 15"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              stroke="#000000"
               strokeWidth="0.27"
             >
               <g id="SVGRepo_bgCarrier" strokeWidth="0">
@@ -80,7 +79,6 @@ const ProductCaraousel = () => {
                   width="15"
                   height="15"
                   rx="7.5"
-                  fill="#000000"
                   strokeWidth="0"
                 />
               </g>
@@ -92,7 +90,6 @@ const ProductCaraousel = () => {
               <g id="SVGRepo_iconCarrier">
                 <path
                   d="M9.875 7.5C9.875 8.81168 8.81168 9.875 7.5 9.875C6.18832 9.875 5.125 8.81168 5.125 7.5C5.125 6.18832 6.18832 5.125 7.5 5.125C8.81168 5.125 9.875 6.18832 9.875 7.5Z"
-                  fill="#000000"
                 />
               </g>
             </svg>
@@ -103,7 +100,7 @@ const ProductCaraousel = () => {
   };
 
   return (
-    <section className="flex flex-col items-end gap-y-9 carousel-container min-h-[850px] pl-28 py-8 w-full">
+    <section className="flex flex-col items-end gap-y-9 carousel-container min-h-fit pl-28 py-10 w-full">
       <header className="section-header flex flex-row justify-between items-center w-full min-w-full">
         <div className="section-title">
           <h2 className="text-4xl font-medium">Featured</h2>

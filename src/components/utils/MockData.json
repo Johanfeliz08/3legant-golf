@@ -134,6 +134,38 @@
         "category_id":null
       }
 
+    ],
+    "categories": [
+      {
+        "id":1,
+        "name":"Golf Clubs",
+        "image":"src/assets/images/categories/golf-clubs.png"
+      },
+      {
+        "id":2,
+        "name":"Golf Balls",
+        "image":"src/assets/images/categories/golf-balls.png"
+      },
+      {
+        "id":3,
+        "name":"Golf Bags",
+        "image":"src/assets/images/categories/golf-bags.png"
+      },
+      {
+        "id":4,
+        "name":"Clothing & Rainwear",
+        "image":"src/assets/images/categories/clothing&rainwear.png"
+      }
+      ,      {
+        "id":5,
+        "name":"Footwear",
+        "image":"src/assets/images/categories/footwear.png"
+      },
+      {
+        "id":6,
+        "name":"Accesories",
+        "image":"src/assets/images/categories/accesories.png"
+      }
     ]
 
   }
