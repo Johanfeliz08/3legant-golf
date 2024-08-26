@@ -1,10 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-// import NavBar from "@/components/NavBar.astro";
 import NavBar from "@/components/NavBar.jsx";
 import NotificationBar from "@/components/NotificationBar.astro";
-import Welcome from "@/components/Welcome.astro";
+import Hero from "@/components/Hero.astro";
 
 import ProductCaraousel from "@/components/ProductCaraousel.jsx";
 import Categories from "@/components/Categories.astro";
@@ -22,7 +21,7 @@ import Footer from "@/components/Footer.astro";
   <header class="flex flex-col min-h-[1200px] h-screen max-h-screen w-full">
     <NotificationBar />
     <NavBar client:load />
-		<Welcome/>
+		<Hero/>
   </header>
 
   <main class="flex flex-col min-h-[800px] w-full">
