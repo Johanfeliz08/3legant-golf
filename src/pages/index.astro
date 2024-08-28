@@ -20,7 +20,7 @@ import Footer from "@/components/Footer.astro";
 
   <header class="flex flex-col min-h-[1200px] h-screen max-h-screen w-full">
 		<NotificationBar />
-		<NavBar client:load />
+		<NavBar client:only />
 		<Hero/>
   </header>
 

@@ -14,6 +14,11 @@ export default {
 			"neutral-06": "var(--neutral-06)",
 			"neutral-07": "var(--neutral-07)",	
 			"text-primary": "var(--text-primary)"	
+		},
+		screens:{
+			'sm': {'min': '0px','max':'1023px'},
+			'md': {'min': '768px', 'max': '1023px'},
+			'lg': {'min': '1024px'},
 		}
 	},
 	plugins: [],

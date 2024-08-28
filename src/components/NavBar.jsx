@@ -7,7 +7,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="navbar flex flex-row justify-between items-center px-14 py-5">
+    <nav className={`navbar ${isMenuOpen ? " py-5":""} flex flex-row justify-between items-center px-14`}>
       <div className="left-column-hamburger flex flex-row justify-center items-center gap-1">
         <div className="hambugericon p-2 lg:hidden">
           <label htmlFor="hamburgercb">
@@ -41,18 +41,18 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className={`${isMenuOpen ? "flex" : "hidden"} background fixed top-0 left-0 w-screen h-screen z-50 bg-[rgba(0,0,0,0.7)] `}>
+      <div className={`background ${isMenuOpen ? "sm:flex sm:fixed sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:z-50 sm:bg-[rgba(0,0,0,0.7)] " : ""}`}>
         <div
-          className={`${isMenuOpen ? "flex" : "hidden"} hamburger-menu-container fixed flex flex-col top-0 left-0  bg-neutral-01 z-50 w-[90%] h-screen
-             p-8 justify-between items-start border-solid border border-accent-primary
-            md:w-[60%] lg:flex-row lg:gap-14 lg:justify-center lg:items-center`}
+          className={` hamburger-menu-container  ${isMenuOpen ? "sm:flex sm:fixed sm:flex-col sm:top-0 sm:left-0  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-screen sm:p-8 sm:justify-between sm:items-start md:w-[60%]" : ""}
+             lg:flex-row lg:gap-14 lg:justify-center lg:items-center
+            `}
         >
-          <div className="top flex flex-col w-full gap-y-4">
-            <div className="close-bar flex flex-row justify-between w-full py-2">
-              <div className="logo">
-                <span className="text-xl font-bold">3legant.</span>
+          <div className={`top ${isMenuOpen ? " flex flex-col w-full gap-y-4":""}`}>
+            <div className={`close-bar ${isMenuOpen ? "flex flex-row justify-between w-full py-2":""} lg:hidden` }>
+              <div className={`logo ${isMenuOpen ? "flex": "hidden"} lg:hidden`}>
+                <span className={`${isMenuOpen ? "text-xl font-bold": "hidden"} lg:hidden`}>3legant.</span>
               </div>
-              <div className="closeicon">
+              <div className={`closeicon ${isMenuOpen ? "flex": "hidden"}`}>
                 <label htmlFor="hamburger-close-cb">
                   <svg
                     className=" fill-neutral-05 size-8"
@@ -80,10 +80,9 @@ const NavBar = () => {
               </div>
             </div>
 
-            <div className="search-bar flex flex-row gap-3 p-5 border border-solid border-accent-secondary rounded-md">
+            <div className={`search-bar ${isMenuOpen ? " flex flex-row gap-3 p-5 border border-solid border-accent-secondary rounded-md" : "hidden" } lg:hidden`}>
               <svg
-                width="24"
-                height="24"
+                className={`${isMenuOpen ? " size-6" : "hidden"}`}
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +97,7 @@ const NavBar = () => {
               </svg>
 
               <input
-                className="h-full w-full focus:outline-none"
+                className={`${isMenuOpen ? "h-full w-full focus:outline-none":"hidden"} `}
                 type="text"
                 name="searchbar"
                 id="searchbar"
@@ -106,15 +105,15 @@ const NavBar = () => {
               />
             </div>
 
-            <ul className={`navitems flex flex-col  w-full`}>
-              <li className="font-medium text-lg py-5 border-b border-neutral-03 border-solid">
+            <ul className={`navitems ${isMenuOpen ? "sm:flex sm:flex-col sm:w-full" : "hidden"} lg:flex lg:gap-10 lg:py-4`}>
+            <li className={`${isMenuOpen ? "sm:border-b sm:border-neutral-03 sm:border-solid":""} font-medium sm:text-lg sm:py-5`}>
                 <a href="">Home</a>
               </li>
-              <li className="font-medium text-lg py-5 border-b border-neutral-03 border-solid">
-                <a href="" className="flex flex-row gap-1 justify-between">
+              <li className={`${isMenuOpen ? "sm:border-b sm:border-neutral-03 sm:border-solid":""} font-medium sm:text-lg sm:py-5`}>
+                <a href="" className="flex flex-row gap-1 sm:justify-between">
                   <span>Shop</span>
                   <svg
-                    className=" stroke-accent-secondary size-8"
+                    className=" stroke-accent-secondary lg:size-6 sm:size-8"
                     width="19"
                     height="18"
                     viewBox="0 0 19 18"
@@ -130,11 +129,11 @@ const NavBar = () => {
                   </svg>
                 </a>
               </li>
-              <li className="font-medium text-lg py-5 border-b border-neutral-03 border-solid">
-                <a href="" className="flex flex-row gap-1 justify-between">
+              <li className={`${isMenuOpen ? "sm:border-b sm:border-neutral-03 sm:border-solid":""} font-medium sm:text-lg sm:py-5`}>
+                <a href="" className="flex flex-row gap-1 sm:justify-between">
                   <span>Product</span>
                   <svg
-                    className=" stroke-accent-secondary  size-8"
+                    className=" stroke-accent-secondary lg:size-6 sm:size-8"
                     width="19"
                     height="18"
                     viewBox="0 0 19 18"
@@ -150,14 +149,14 @@ const NavBar = () => {
                   </svg>
                 </a>
               </li>
-              <li className="font-medium text-lg py-5 border-b border-neutral-03 border-solid">
+              <li className={`${isMenuOpen ? "sm:border-b sm:border-neutral-03 sm:border-solid":""} font-medium sm:text-lg sm:py-5`}>
                 <a href="">Contact Us</a>
               </li>
             </ul>
           </div>
 
-          <div className="bottom flex flex-col gap-2 w-full">
-            <div className="cart font-medium text-neutral-04 text-lg py-4 border-b border-neutral-03 border-solid">
+          <div className={`bottom ${isMenuOpen ? "flex flex-col gap-2 w-full":""}`}>
+            <div className={`cart ${isMenuOpen ? "font-medium text-neutral-04 text-lg py-4 border-b border-neutral-03 border-solid":"hidden"} lg:hidden `}>
               <a href="" className=" flex flex-row justify-between">
                 <span>Cart</span>
                 <div className="icon flex flex-row justify-center items-center gap-1">
@@ -208,7 +207,7 @@ const NavBar = () => {
               </a>
             </div>
 
-            <div className="wish-list font-medium text-neutral-04 text-lg py-4 border-b border-neutral-03 border-solid">
+            <div className={`wish-list ${isMenuOpen ? "font-medium text-neutral-04 text-lg py-4 border-b border-neutral-03 border-solid":"hidden"} lg:hidden `}>
               <a href="" className="flex flex-row justify-between">
                 <span>Wishlist</span>
                 <div className="icon flex flex-row justify-center items-center gap-1">
@@ -252,11 +251,11 @@ const NavBar = () => {
               </a>
             </div>
 
-            <div className="sign-in w-full bg-accent-secondary text-neutral-01 text-2xl p-5 rounded-md text-center hover:bg-accent-primary transition-colors">
+            <div className={`sign-in ${isMenuOpen ? "w-full bg-accent-secondary text-neutral-01 text-2xl p-5 rounded-md text-center hover:bg-accent-primary transition-colors":"hidden"} lg:hidden `}>
               <button type="button">Sign In</button>
             </div>
 
-            <div className="social-media-icons flex flex-row gap-6 py-4">
+            <div className={`social-media-icons ${isMenuOpen ? "flex flex-row gap-6 py-4":"hidden"} lg:hidden `}>
               <a href="">
                 <svg
                   className="size-8"
