@@ -4,7 +4,7 @@
   /* Small screen size */
   @media (max-width:768px) {
 
-    .navbar {
+    /* .navbar {
       justify-content:space-between;
     }
 
@@ -39,11 +39,11 @@
 
     .search, .user-account {
       display: none;
-    }
+    } */
 
     /* Hover effect */
 
-    .navitems li{
+    /* .navitems li{
       width: 100%;
     }
     
@@ -59,7 +59,7 @@
     
     background-color: var(--accent-primary);
     
-    }
+    } */
 
 
   }
@@ -68,9 +68,9 @@
   @media (min-width: 768px) and (max-width: 1024px) {
 
 
-    .navitems {
+    /* .navitems {
       gap: 1rem;
-    }
+    } */
 
 
 
