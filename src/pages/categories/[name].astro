@@ -4,7 +4,7 @@ import NotificationBar from "@/components/NotificationBar.astro";
 import NavBar from "@/components/NavBar";
 import CaraouselCard from "@/components/CaraouselCard";
 
-import {getBy,getCategoriesByProperty, getCategoryBy,getItemBy } from "@/services/3legant.astro";
+import {getBy,getCategoriesPropertyValues, getCategoryBy } from "@/services/3legant.astro";
 
 const { name } = Astro.params
 
@@ -18,7 +18,7 @@ const items = getBy("items").filter((item) => item.category_id === category.id)
 
 export function getStaticPaths () {
   
-  const categoriesNames = getCategoriesByProperty("name");
+  const categoriesNames = getCategoriesPropertyValues("name");
 
   return categoriesNames.map( name => ({
 
