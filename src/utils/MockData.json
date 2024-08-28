@@ -14,7 +14,7 @@
         "isHot":true,
         "hasDiscount":true,
         "discount":50,
-        "category_id":1
+        "category_id":6
 
       },
       {
@@ -29,7 +29,7 @@
         "isHot":false,
         "hasDiscount":false,
         "discount":0,
-        "category_id":1
+        "category_id":6
       },
       {
         "id":3,
@@ -43,7 +43,7 @@
         "isHot":true,
         "hasDiscount":false,
         "discount":0,
-        "category_id":1
+        "category_id":5
       },
       {
         "id":4,
@@ -57,7 +57,7 @@
         "isHot":false,
         "hasDiscount":true,
         "discount":0,
-        "category_id":2
+        "category_id":3
       },
       {
         "id":5,
@@ -71,7 +71,7 @@
         "isHot":false,
         "hasDiscount":false,
         "discount":0,
-        "category_id":2
+        "category_id":4
       },
       {
         "id":6,
@@ -85,7 +85,7 @@
         "isHot":true,
         "hasDiscount":false,
         "discount":0,
-        "category_id":2
+        "category_id":4
       },
       {
         "id":7,
@@ -99,7 +99,7 @@
         "isHot":false,
         "hasDiscount":false,
         "discount":0,
-        "category_id":3
+        "category_id":4
       },
       {
         "id":8,
@@ -113,7 +113,7 @@
         "isHot":true,
         "hasDiscount":false,
         "discount":0,
-        "category_id":3
+        "category_id":5
       },
       {
         "id":9,
@@ -127,7 +127,7 @@
         "isHot":true,
         "hasDiscount":false,
         "discount":0,
-        "category_id":3
+        "category_id":5
       },
       {
         "id":10,
@@ -141,9 +141,134 @@
         "isHot":true,
         "hasDiscount":false,
         "discount":0,
-        "category_id":4
+        "category_id":5
+      },{
+        "id":11,
+        "image":"src/assets/images/item-images/stickbag.png",
+        "name":"stickbag",
+        "rating":4,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "stock":0,
+        "price":0,
+        "isNew":false,
+        "isHot":false,
+        "hasDiscount":true,
+        "discount":0,
+        "category_id":3
+      },{
+        "id":12,
+        "image":"src/assets/images/item-images/stickbag.png",
+        "name":"stickbag",
+        "rating":4,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "stock":0,
+        "price":0,
+        "isNew":false,
+        "isHot":false,
+        "hasDiscount":true,
+        "discount":0,
+        "category_id":3
+      },{
+        "id":13,
+        "image":"src/assets/images/item-images/glove2.png",
+        "name":"glove2",
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "stock":0,
+        "price":0,
+        "isNew":false,
+        "isHot":false,
+        "hasDiscount":false,
+        "discount":0,
+        "category_id":6
+      },
+      {
+        "id":14,
+        "image":"src/assets/images/item-images/golf-club.png",
+        "name":"golf club",
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "stock":0,
+        "price":0,
+        "isNew":false,
+        "isHot":false,
+        "hasDiscount":true,
+        "discount":0,
+        "category_id":1
+      },
+      {
+        "id":15,
+        "image":"src/assets/images/item-images/golf-club.png",
+        "name":"golf club",
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "stock":0,
+        "price":0,
+        "isNew":false,
+        "isHot":true,
+        "hasDiscount":false,
+        "discount":0,
+        "category_id":1
+      },
+      {
+        "id":16,
+        "image":"src/assets/images/item-images/golf-club.png",
+        "name":"golf club",
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "stock":0,
+        "price":0,
+        "isNew":false,
+        "isHot":true,
+        "hasDiscount":true,
+        "discount":0,
+        "category_id":1
+      },
+      {
+        "id":17,
+        "image":"src/assets/images/item-images/balls1.png",
+        "name":"balls1",
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "stock":0,
+        "price":0,
+        "isNew":false,
+        "isHot":true,
+        "hasDiscount":true,
+        "discount":0,
+        "category_id":2
+      },
+      {
+        "id":18,
+        "image":"src/assets/images/item-images/balls1.png",
+        "name":"balls1",
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "stock":0,
+        "price":0,
+        "isNew":false,
+        "isHot":false,
+        "hasDiscount":true,
+        "discount":0,
+        "category_id":2
+      },
+      {
+        "id":19,
+        "image":"src/assets/images/item-images/balls1.png",
+        "name":"balls1",
+        "rating":2,
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "stock":0,
+        "price":0,
+        "isNew":false,
+        "isHot":true,
+        "hasDiscount":false,
+        "discount":0,
+        "category_id":2
       }
 
+
+      
     ],
     "categories": [
       {

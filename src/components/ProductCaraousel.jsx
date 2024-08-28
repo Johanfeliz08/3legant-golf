@@ -7,8 +7,8 @@ import { getBy } from "@/services/3legant.astro"
 const ProductCaraousel = () => {
 
   // Data
-  
-  const itemsData = getBy("items");
+
+  const itemsData = getBy("items").filter((items) => items.id <= 10);
 
   //  Slide functionality with the mouse 
 
