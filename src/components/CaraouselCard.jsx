@@ -1,6 +1,6 @@
 import React from "react";
 
-import "@/components/utils/CaraouselCard.css";
+import "@/components/styles/CaraouselCard.css";
 
 const CaraouselCard = ({
   id,

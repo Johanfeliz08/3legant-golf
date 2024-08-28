@@ -1,13 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import "@/components/styles/ProductCaraousel.css";
-import CaraouselCard from "./utils/CaraouselCard";
-import MockData from "@/components/utils/MockData.json";
+import CaraouselCard from "@/components/CaraouselCard";
+import { getBy } from "@/services/3legant.astro"
+
 
 const ProductCaraousel = () => {
 
   // Data
-
-  const itemsData = Object.values(MockData.items);
+  
+  const itemsData = getBy("items");
 
   //  Slide functionality with the mouse 
 

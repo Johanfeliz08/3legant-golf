@@ -1,0 +1,72 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import NotificationBar from "@/components/NotificationBar.astro";
+import NavBar from "@/components/NavBar";
+import CaraouselCard from "@/components/CaraouselCard";
+
+import {getBy,getCategoriesByProperty, getCategoryBy,getItemBy } from "@/services/3legant.astro";
+
+const { name } = Astro.params
+
+// General data fetching
+
+const category = getCategoryBy("name",`${name}`)
+
+const items = getBy("items").filter((item) => item.category_id === category.id)
+
+// Dynamics paths
+
+export function getStaticPaths () {
+  
+  const categoriesNames = getCategoriesByProperty("name");
+
+  return categoriesNames.map( name => ({
+
+  params: { name: name }
+
+  }))
+
+};
+
+---
+
+<Layout title=`3legant | ${category.name}`>
+  <header class="flex flex-col w-full">
+    <NotificationBar />
+    <NavBar client:load />
+  </header>
+
+  <main class="flex flex-col justify-center items-center min-h-[800px] h-full w-full px-20 py-10">
+    <div class="section-header py-5">
+      <h1 class="text-5xl text-accent-secondary">{`${category.name}`}</h1>
+    </div>
+     <div class="products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10">
+      {
+        items.map((item) => (
+
+        <CaraouselCard
+          id={item.id}
+          image={`../${item.image}`}
+          name={item.name}
+          rating={item.rating}
+          description={item.description}
+          price={item.price}
+          isHot={item.isHot}
+          hasDiscount={item.hasDiscount}
+          discount={item.discount}
+          category_id={item.category_id}
+        />
+
+        ))
+      }
+     </div>
+
+	</main>
+
+  <footer>
+    
+  </footer>
+
+</Layout>
+
+

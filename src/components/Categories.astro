@@ -1,20 +1,19 @@
 ---
-import MockData from "@/components/utils/MockData.json";
+import { getBy } from "@/services/3legant.astro"
 
-const data = Object.values(MockData.categories);
+const categories = getBy("categories");
 
-console.log(data);
 ---
 
-<section class="categories flex flex-col justify-center items-center w-full h-full min-h-[800px]">
+<section class="categories flex flex-col justify-center items-center w-full h-full min-h-[800px] px-20">
   <header class="categories-header text-accent-secondary py-10">
-    <h2 class="text-4xl">Shop by Categories</h2>
+    <h2 class="text-3xl lg:text-4xl font-medium">Shop by Categories</h2>
   </header>
 
-  <div class="categories-container grid grid-cols-3 grid-rows-2 gap-x-5 gap-y-10">
+  <div class="categories-container grid grid-cols-2 grid-rows-3 lg:grid-cols-3 lg:grid-rows-2  gap-x-5 gap-y-10">
     {
-      data.map((category) => (
-        <a href="">
+      categories.map((category) => (
+        <a href={`/categories/${category.name}`}>
         <article class="flex flex-col justify-center items-center">
           <div class="image-container bg-neutral-03">
             <img src={category.image} alt={`${category.name} + image`}>
