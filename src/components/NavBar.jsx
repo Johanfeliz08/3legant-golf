@@ -28,8 +28,7 @@ const NavBar = () => {
             </svg>
             <input
               type="checkbox"
-              value={isMenuOpen}
-              onChange={(e) => setIsMenuOpen(e.target.checked)}
+              onChange={(e) => setIsMenuOpen(!isMenuOpen)}
               name="hamburgercb"
               id="hamburgercb"
               className="hidden"
@@ -37,7 +36,7 @@ const NavBar = () => {
           </label>
         </div>
         <div className="logo">
-          <span className="text-xl font-bold">3legant.</span>
+        <a href="/#"><span className="text-xl font-bold">3legant.</span></a>
         </div>
       </div>
 
@@ -70,8 +69,7 @@ const NavBar = () => {
                   </svg>
                   <input
                     type="checkbox"
-                    value={isMenuOpen}
-                    onChange={(e) => setIsMenuOpen(e.target.checked)}
+                    onChange={(e) => setIsMenuOpen(!isMenuOpen)}
                     name="hamburger-close-cb"
                     id="hamburger-close-cb"
                     className="hidden"
