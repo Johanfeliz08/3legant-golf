@@ -7,7 +7,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className={`navbar ${isMenuOpen ? " py-5":""} flex flex-row justify-between items-center px-14`}>
+    <nav className={`navbar flex flex-row justify-between items-center px-14 py-3`}>
       <div className="left-column-hamburger flex flex-row justify-center items-center gap-1">
         <div className="hambugericon p-2 lg:hidden">
           <label htmlFor="hamburgercb">
@@ -41,18 +41,18 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className={`background ${isMenuOpen ? "sm:flex sm:fixed sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:z-50 sm:bg-[rgba(0,0,0,0.7)] " : ""}`}>
+      <div className={`background ${isMenuOpen ? "flex" : "sm:hidden"} sm:flex sm:fixed sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:z-50 sm:bg-[rgba(0,0,0,0.7)] `}>
         <div
-          className={` hamburger-menu-container  ${isMenuOpen ? "sm:flex sm:fixed sm:flex-col sm:top-0 sm:left-0  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-screen sm:p-8 sm:justify-between sm:items-start md:w-[60%]" : ""}
+          className={` hamburger-menu-container sm:flex sm:fixed sm:flex-col sm:top-0 sm:left-0  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-screen sm:p-8 sm:justify-between sm:items-start md:w-[60%]
              lg:flex-row lg:gap-14 lg:justify-center lg:items-center
             `}
         >
-          <div className={`top ${isMenuOpen ? " flex flex-col w-full gap-y-4":""}`}>
-            <div className={`close-bar ${isMenuOpen ? "flex flex-row justify-between w-full py-2":""} lg:hidden` }>
-              <div className={`logo ${isMenuOpen ? "flex": "hidden"} lg:hidden`}>
-                <span className={`${isMenuOpen ? "text-xl font-bold": "hidden"} lg:hidden`}>3legant.</span>
+          <div className={`top sm:flex sm:flex-col sm:w-full sm:gap-y-4`}>
+            <div className={`close-bar sm:flex sm:flex-row sm:justify-between sm:w-full sm:py-2 lg:hidden` }>
+              <div className={`logo sm:flex lg:hidden`}>
+                <span className={`sm:text-xl sm:font-bold lg:hidden`}>3legant.</span>
               </div>
-              <div className={`closeicon ${isMenuOpen ? "flex": "hidden"}`}>
+              <div className={`closeicon sm:flex lg:hidden`}>
                 <label htmlFor="hamburger-close-cb">
                   <svg
                     className=" fill-neutral-05 size-8"
@@ -80,7 +80,7 @@ const NavBar = () => {
               </div>
             </div>
 
-            <div className={`search-bar ${isMenuOpen ? " flex flex-row gap-3 p-5 border border-solid border-accent-secondary rounded-md" : "hidden" } lg:hidden`}>
+            <div className={`search-bar sm:flex sm:flex-row sm:gap-3 sm:p-5 sm:border sm:border-solid sm:border-accent-secondary sm:rounded-md lg:hidden`}>
               <svg
                 className={`${isMenuOpen ? " size-6" : "hidden"}`}
                 viewBox="0 0 24 24"
@@ -105,11 +105,11 @@ const NavBar = () => {
               />
             </div>
 
-            <ul className={`navitems ${isMenuOpen ? "sm:flex sm:flex-col sm:w-full" : "hidden"} lg:flex lg:gap-10 lg:py-4`}>
-            <li className={`${isMenuOpen ? "sm:border-b sm:border-neutral-03 sm:border-solid":""} font-medium sm:text-lg sm:py-5`}>
+            <ul className={`navitems sm:flex sm:flex-col sm:w-full lg:flex lg:gap-10 lg:py-4`}>
+            <li className={`sm:border-b sm:border-neutral-03 sm:border-solid font-medium sm:text-lg sm:py-5`}>
                 <a href="">Home</a>
               </li>
-              <li className={`${isMenuOpen ? "sm:border-b sm:border-neutral-03 sm:border-solid":""} font-medium sm:text-lg sm:py-5`}>
+              <li className={`sm:border-b sm:border-neutral-03 sm:border-solid font-medium sm:text-lg sm:py-5`}>
                 <a href="" className="flex flex-row gap-1 sm:justify-between">
                   <span>Shop</span>
                   <svg
@@ -129,7 +129,7 @@ const NavBar = () => {
                   </svg>
                 </a>
               </li>
-              <li className={`${isMenuOpen ? "sm:border-b sm:border-neutral-03 sm:border-solid":""} font-medium sm:text-lg sm:py-5`}>
+              <li className={`sm:border-b sm:border-neutral-03 sm:border-solid font-medium sm:text-lg sm:py-5`}>
                 <a href="" className="flex flex-row gap-1 sm:justify-between">
                   <span>Product</span>
                   <svg
@@ -149,14 +149,14 @@ const NavBar = () => {
                   </svg>
                 </a>
               </li>
-              <li className={`${isMenuOpen ? "sm:border-b sm:border-neutral-03 sm:border-solid":""} font-medium sm:text-lg sm:py-5`}>
+              <li className={`sm:border-b sm:border-neutral-03 sm:border-solid font-medium sm:text-lg sm:py-5`}>
                 <a href="">Contact Us</a>
               </li>
             </ul>
           </div>
 
-          <div className={`bottom ${isMenuOpen ? "flex flex-col gap-2 w-full":""}`}>
-            <div className={`cart ${isMenuOpen ? "font-medium text-neutral-04 text-lg py-4 border-b border-neutral-03 border-solid":"hidden"} lg:hidden `}>
+          <div className={`bottom sm:flex sm:flex-col sm:gap-2 sm:w-full lg:hidden`}>
+            <div className={`cart sm:font-medium sm:text-neutral-04 sm:text-lg sm:py-4 sm:border-b sm:border-neutral-03 sm:border-solid lg:hidden `}>
               <a href="" className=" flex flex-row justify-between">
                 <span>Cart</span>
                 <div className="icon flex flex-row justify-center items-center gap-1">
@@ -207,7 +207,7 @@ const NavBar = () => {
               </a>
             </div>
 
-            <div className={`wish-list ${isMenuOpen ? "font-medium text-neutral-04 text-lg py-4 border-b border-neutral-03 border-solid":"hidden"} lg:hidden `}>
+            <div className={`wish-list sm:font-medium sm:text-neutral-04 sm:text-lg sm:py-4 sm:border-b sm:border-neutral-03 sm:border-solid lg:hidden `}>
               <a href="" className="flex flex-row justify-between">
                 <span>Wishlist</span>
                 <div className="icon flex flex-row justify-center items-center gap-1">
@@ -251,11 +251,11 @@ const NavBar = () => {
               </a>
             </div>
 
-            <div className={`sign-in ${isMenuOpen ? "w-full bg-accent-secondary text-neutral-01 text-2xl p-5 rounded-md text-center hover:bg-accent-primary transition-colors":"hidden"} lg:hidden `}>
+            <div className={`sign-in sm:w-full sm:bg-accent-secondary sm:text-neutral-01 sm:text-2xl sm:p-5 sm:rounded-md sm:text-center sm:hover:bg-accent-primary sm:transition-colors lg:hidden `}>
               <button type="button">Sign In</button>
             </div>
 
-            <div className={`social-media-icons ${isMenuOpen ? "flex flex-row gap-6 py-4":"hidden"} lg:hidden `}>
+            <div className={`social-media-icons sm:flex sm:flex-row sm:gap-6 sm:py-4 lg:hidden `}>
               <a href="">
                 <svg
                   className="size-8"
