@@ -40,18 +40,22 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className={`background ${isMenuOpen ? "flex menuisopen" : "menuisclosed sm:hidden sm:hamburgerslideclose"} sm:flex sm:fixed sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:z-50 sm:bg-[rgba(0,0,0,0.7)] `}>
+      <div className={`background ${isMenuOpen ? "flex menuisopen" : "menuisclosed sm:hidden sm:hamburgerslideclose md:hidden md:hamburgerslideclose"} sm:flex sm:fixed sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:z-50 sm:bg-[rgba(0,0,0,0.7)]
+       md:flex md:fixed md:top-0 md:left-0 md:w-screen md:h-screen md:z-50 md:bg-[rgba(0,0,0,0.7)]
+      `}>
         <div
-          className={` hamburger-menu-container ${isMenuOpen ? "menuisopen" : "menuisclosed"} sm:flex sm:fixed sm:flex-col sm:top-0 sm:left-0  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-screen sm:p-8 sm:justify-between sm:items-start md:w-[60%]
+          className={` hamburger-menu-container ${isMenuOpen ? "menuisopen" : "menuisclosed"} sm:flex sm:fixed sm:flex-col sm:top-0 sm:left-0  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-screen sm:p-8 sm:justify-between sm:items-start 
+            md:flex md:fixed md:flex-col md:top-0 md:left-0  md:bg-neutral-01 md:z-50  md:h-screen md:p-8 md:justify-between md:items-start
+            md:w-[60%]
              lg:flex-row lg:gap-14 lg:justify-center lg:items-center
             `}
         >
-          <div className={`top sm:flex sm:flex-col sm:w-full sm:gap-y-4`}>
-            <div className={`close-bar sm:flex sm:flex-row sm:justify-between sm:w-full sm:py-2 lg:hidden` }>
-              <div className={`logo sm:flex lg:hidden`}>
-                <span className={`sm:text-xl sm:font-bold lg:hidden`}>3legant.</span>
+          <div className={`top sm:flex sm:flex-col sm:w-full sm:gap-y-4 md:flex md:flex-col md:w-full md:gap-y-4`}>
+            <div className={`close-bar sm:flex sm:flex-row sm:justify-between sm:w-full sm:py-2 md:flex md:flex-row md:justify-between md:w-full md:py-2 lg:hidden` }>
+              <div className={`logo sm:flex md:flex lg:hidden`}>
+                <span className={`sm:text-xl sm:font-bold md:text-xl md:font-bold lg:hidden`}>3legant.</span>
               </div>
-              <div className={`closeicon sm:flex lg:hidden`}>
+              <div className={`closeicon sm:flex md:flex lg:hidden`}>
                 <label htmlFor="hamburger-close-cb">
                   <svg
                     className=" fill-neutral-05 size-8"
@@ -78,9 +82,11 @@ const NavBar = () => {
               </div>
             </div>
 
-            <div className={`search-bar sm:flex sm:flex-row sm:gap-3 sm:p-5 sm:border sm:border-solid sm:border-accent-secondary sm:rounded-md lg:hidden`}>
+            <div className={`search-bar sm:flex sm:flex-row sm:gap-3 sm:p-5 sm:border sm:border-solid sm:border-accent-secondary sm:rounded-md 
+              md:flex md:flex-row md:gap-3 md:p-5 md:border md:border-solid md:border-accent-secondary md:rounded-md
+              lg:hidden`}>
               <svg
-                className={`${isMenuOpen ? " size-6" : "hidden"}`}
+                className={`hidden sm:flex sm:size-6 md:flex md:size-6`}
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +101,7 @@ const NavBar = () => {
               </svg>
 
               <input
-                className={`${isMenuOpen ? "h-full w-full focus:outline-none":"hidden"} `}
+                className={`hidden sm:flex sm:h-full sm:w-full sm:focus:outline-none md:flex md:h-full md:w-full md:focus:outline-none`}
                 type="text"
                 name="searchbar"
                 id="searchbar"
@@ -103,15 +109,19 @@ const NavBar = () => {
               />
             </div>
 
-            <ul className={`navitems sm:flex sm:flex-col sm:w-full lg:flex lg:gap-10 lg:py-4`}>
-            <li className={`sm:border-b sm:border-neutral-03 sm:border-solid font-medium sm:text-lg sm:py-5`}>
+            <ul className={`navitems sm:flex sm:flex-col sm:w-full md:flex md:flex-col md:w-full lg:flex lg:gap-10 lg:py-4`}>
+            <li className={` font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5
+              md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5
+              `}>
                 <a href="">Home</a>
               </li>
-              <li className={`sm:border-b sm:border-neutral-03 sm:border-solid font-medium sm:text-lg sm:py-5`}>
-                <a href="" className="flex flex-row gap-1 sm:justify-between">
+              <li className={` font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5
+              md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5
+              `}>
+                <a href="" className="flex flex-row gap-1 sm:justify-between md:justify-between">
                   <span>Shop</span>
                   <svg
-                    className=" stroke-accent-secondary lg:size-6 sm:size-8"
+                    className=" stroke-accent-secondary lg:size-6 sm:size-8 md:size-8"
                     width="19"
                     height="18"
                     viewBox="0 0 19 18"
@@ -127,11 +137,13 @@ const NavBar = () => {
                   </svg>
                 </a>
               </li>
-              <li className={`sm:border-b sm:border-neutral-03 sm:border-solid font-medium sm:text-lg sm:py-5`}>
-                <a href="" className="flex flex-row gap-1 sm:justify-between">
+              <li className={` font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5
+              md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5
+              `}>
+                <a href="" className="flex flex-row gap-1 sm:justify-between md:justify-between">
                   <span>Product</span>
                   <svg
-                    className=" stroke-accent-secondary lg:size-6 sm:size-8"
+                    className=" stroke-accent-secondary lg:size-6 sm:size-8 md:size-8"
                     width="19"
                     height="18"
                     viewBox="0 0 19 18"
@@ -147,14 +159,18 @@ const NavBar = () => {
                   </svg>
                 </a>
               </li>
-              <li className={`sm:border-b sm:border-neutral-03 sm:border-solid font-medium sm:text-lg sm:py-5`}>
+              <li className={` font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5
+              md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5
+              `}>
                 <a href="">Contact Us</a>
               </li>
             </ul>
           </div>
 
-          <div className={`bottom sm:flex sm:flex-col sm:gap-2 sm:w-full lg:hidden`}>
-            <div className={`cart sm:font-medium sm:text-neutral-04 sm:text-lg sm:py-4 sm:border-b sm:border-neutral-03 sm:border-solid lg:hidden `}>
+          <div className={`bottom sm:flex sm:flex-col sm:gap-2 sm:w-full md:flex md:flex-col md:gap-2 md:w-full lg:hidden`}>
+            <div className={`cart sm:font-medium sm:text-neutral-04 sm:text-lg sm:py-4 sm:border-b sm:border-neutral-03 sm:border-solid 
+              md:font-medium md:text-neutral-04 md:text-lg md:py-4 md:border-b md:border-neutral-03 md:border-solid
+              lg:hidden `}>
               <a href="" className=" flex flex-row justify-between">
                 <span>Cart</span>
                 <div className="icon flex flex-row justify-center items-center gap-1">
@@ -205,7 +221,9 @@ const NavBar = () => {
               </a>
             </div>
 
-            <div className={`wish-list sm:font-medium sm:text-neutral-04 sm:text-lg sm:py-4 sm:border-b sm:border-neutral-03 sm:border-solid lg:hidden `}>
+            <div className={`wish-list sm:font-medium sm:text-neutral-04 sm:text-lg sm:py-4 sm:border-b sm:border-neutral-03 sm:border-solid 
+              md:font-medium md:text-neutral-04 md:text-lg md:py-4 md:border-b md:border-neutral-03 md:border-solid
+              lg:hidden `}>
               <a href="" className="flex flex-row justify-between">
                 <span>Wishlist</span>
                 <div className="icon flex flex-row justify-center items-center gap-1">
@@ -249,11 +267,15 @@ const NavBar = () => {
               </a>
             </div>
 
-            <div className={`sign-in sm:w-full sm:bg-accent-secondary sm:text-neutral-01 sm:text-2xl sm:p-5 sm:rounded-md sm:text-center sm:hover:bg-accent-primary sm:transition-colors lg:hidden `}>
+            <div className={`sign-in sm:w-full sm:bg-accent-secondary sm:text-neutral-01 sm:text-2xl sm:p-5 sm:rounded-md sm:text-center sm:hover:bg-accent-primary sm:transition-colors 
+              md:w-full md:bg-accent-secondary md:text-neutral-01 md:text-2xl md:p-5 md:rounded-md md:text-center md:hover:bg-accent-primary md:transition-colors
+              lg:hidden `}>
               <button type="button">Sign In</button>
             </div>
 
-            <div className={`social-media-icons sm:flex sm:flex-row sm:gap-6 sm:py-4 lg:hidden `}>
+            <div className={`social-media-icons sm:flex sm:flex-row sm:gap-6 sm:py-4
+              md:flex md:flex-row md:gap-6 md:py-4
+              lg:hidden `}>
               <a href="">
                 <svg
                   className="size-8"
