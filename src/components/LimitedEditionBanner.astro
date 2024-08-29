@@ -25,11 +25,11 @@
       <div class="">
         <span class="text-neutral-03 opacity-70">Offer expires in:</span>
       </div>
-      <div class="time py-6 space-x-2">
-        <span class="text-accent-secondary text-3xl font-medium bg-neutral-01 p-3">02</span>
-        <span class="text-accent-secondary text-3xl font-medium bg-neutral-01 p-3">12</span>
-        <span class="text-accent-secondary text-3xl font-medium bg-neutral-01 p-3">45</span>
-        <span class="text-accent-secondary text-3xl font-medium bg-neutral-01 p-3">05</span>
+      <div class="time flex flex-row py-6 space-x-2">
+        <span id="days" class="flex justify-center text-accent-secondary min-w-[70px] text-3xl font-medium bg-neutral-01 p-3">02</span>
+        <span id="hours" class="flex justify-center text-accent-secondary min-w-[70px] text-3xl font-medium bg-neutral-01 p-3">12</span>
+        <span id="minutes" class="flex justify-center text-accent-secondary min-w-[70px] text-3xl font-medium bg-neutral-01 p-3">45</span>
+        <span id="seconds" class="flex justify-center text-accent-secondary min-w-[70px] text-3xl font-medium bg-neutral-01 p-3">05</span>
       </div>
     </div>
     <div class="link w-full h-20 py-5 flex sm:justify-center sm:items-center ">
@@ -56,3 +56,52 @@
 
 
 </style>
+
+<script>
+
+window.onload = function() {
+
+  var days = 0o2;
+  var hours = 12;
+  var minutes = 45;
+  var sec = 50;
+
+  setInterval(function() {
+    
+    document.getElementById("days").innerHTML = days.toString().padStart(2,'0');
+    document.getElementById("hours").innerHTML = hours.toString().padStart(2,'0');
+    document.getElementById("minutes").innerHTML = minutes.toString().padStart(2,'0');
+    document.getElementById("seconds").innerHTML = sec.toString().padStart(2,'0');
+
+    sec--;
+
+    if (sec == 0o0) {
+      
+      minutes--;
+      sec = 60;
+
+      if (minutes == 0o0) {
+        hours--;
+        minutes = 60;
+
+        if (hours == 0o0) {
+          days--;
+          hours = 24;
+
+          if (days == 0o0) {
+            days = 0o2;
+            hours = 12;
+            minutes = 45;
+            sec = 50
+          }
+
+        }
+
+      }
+
+    }
+  }, 1000);
+}
+
+
+</script>
