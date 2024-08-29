@@ -1,49 +1,66 @@
 ---
-
 import ticketIcon from "@/assets/icons/ticket-percent.svg";
 import RightArrow from "@/assets/icons/Arrow-right.astro";
 import CloseIcon from "@/assets/icons/Close.astro";
-
 ---
 
-<section class="notificationBar bg-accent-primary w-full p-2 flex flex-row ">
-
+<section
+  id="notificationbar"
+  class="notificationBar bg-accent-primary w-full p-2 flex flex-row"
+>
   <div class="content flex flex-row justify-center items-center gap-3 w-full">
     <div class="icon">
-      <img class="size-7" src={ticketIcon.src} alt="TicketIcon" aria-hidden="true">
+      <img
+        class="size-7"
+        src={ticketIcon.src}
+        alt="TicketIcon"
+        aria-hidden="true"
+      />
     </div>
     <div class="message font-bold">
       <span>30% off storewide — Limited time!</span>
     </div>
     <div class="calltoaction-container">
-      <a href="" class="calltoaction-link flex flex-row justify-center items-center font-medium border-black border-solid border-b-2 gap-1 transition-colors">
+      <a
+        href=""
+        class="calltoaction-link flex flex-row justify-center items-center font-medium border-black border-solid border-b-2 gap-1 transition-colors"
+      >
         <span>Shop Now</span>
-        <RightArrow class="rightarrowicon stroke-accent-secondary size-5 transition-colors " />
+        <RightArrow
+          class="rightarrowicon stroke-accent-secondary size-5 transition-colors"
+        />
       </a>
     </div>
   </div>
 
-  <div class="closebtn flex ">
-    <a href="">
-      <CloseIcon class="closeicon fill-accent-secondary size-6 transition-colors"/>
-    </a>
+  <div class="closebtn flex">
+    <button type="button" id="closebtn">
+      <CloseIcon
+        class="closeicon fill-accent-secondary size-6 transition-colors"
+      />
+    </button>
   </div>
-  
-
 </section>
 
 <style>
+  .calltoaction-container:hover .calltoaction-link {
+    color: var(--neutral-03);
+  }
 
-.calltoaction-container:hover .calltoaction-link {
-  color:var(--neutral-03);
-}
+  .calltoaction-container:hover .rightarrowicon {
+    stroke: var(--neutral-03);
+  }
 
-.calltoaction-container:hover .rightarrowicon {
-  stroke: var(--neutral-03);
-}
-
-.closebtn:hover .closeicon {
-fill: var(--neutral-03);
-}
-
+  .closebtn:hover .closeicon {
+    fill: var(--neutral-03);
+  }
 </style>
+
+<script>
+  const btn = document.getElementById("closebtn");
+
+  btn.addEventListener("click", (e) => {
+    const notificationbar = document.getElementById("notificationbar");
+    notificationbar ? (notificationbar.style.display = "none") : "flex";
+  });
+</script>

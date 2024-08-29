@@ -19,7 +19,7 @@ import Footer from "@/components/Footer.astro";
 <Layout title="3legant">
 
   <header class="flex flex-col min-h-[1200px] h-screen max-h-screen w-full">
-		<NotificationBar />
+		<NotificationBar client:load />
 		<NavBar client:only />
 		<Hero/>
   </header>
