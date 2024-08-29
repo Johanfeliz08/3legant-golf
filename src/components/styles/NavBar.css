@@ -1,77 +1,80 @@
 
-  /* Responsive design */
+/* Hamburger menu open animation */
 
-  /* Small screen size */
-  @media (max-width:768px) {
+/* Animation for the background */
+/* Open bg animation */
 
-    /* .navbar {
-      justify-content:space-between;
-    }
+@keyframes bgopacity {
 
-    .hambugermenu {
-
-      display: flex;
-
-    }
-
-    .bag-icon, .cart-items-count-icon {
-      width: 2rem;
-      height: auto;
-    }
-
-
-    .navitems {
-      z-index: 50;
-      flex-direction: column;
-      justify-content: start;
-      align-items: start;
-      position: absolute;
-      right: 0;
-      top: 7.6rem;
-      padding:1rem 0;
-      background-color: var(--bg);
-      border-left: 1px rgb(190, 190, 190) solid;
-      width: 12rem;
-      gap:1.5rem;
-      height:100%;
-      max-height: none;
-    }
-
-    .search, .user-account {
-      display: none;
-    } */
-
-    /* Hover effect */
-
-    /* .navitems li{
-      width: 100%;
-    }
-    
-    .navitems > li > a {
-      display: flex;
-      justify-content: start;
-      width: 100%;
-      padding: 0.5rem 1rem ;
-      transition: ease 500ms;
-    }
-    
-    .navitems li a:hover {
-    
-    background-color: var(--accent-primary);
-    
-    } */
-
-
+  from {
+    background-color:rgba(0,0,0,0.0) ;
   }
 
-  /* Medium screen size */
-  @media (min-width: 768px) and (max-width: 1024px) {
+  to {
+    background-color:rgba(0,0,0,0.7) ;
+  }
 
+}
 
-    /* .navitems {
-      gap: 1rem;
-    } */
+.background.menuisopen {
+  animation: bgopacity linear 500ms;
+}
 
+/* Close bg animation*/
 
+@keyframes bgopacityc {
 
-  } 
+  from {
+    background-color:rgba(0,0,0,0.7);
+    display: flex;
+  }
+
+  to {
+    background-color:rgba(0,0,0,0.0) ;
+    display:none;
+  }
+
+}
+
+.background.menuisclosed {
+  animation: bgopacityc linear 500ms;
+}
+
+/* Animation for the menu - Slides in  */
+/* Open menu animation */
+
+@keyframes hamburgerslideopen {
+
+  from {
+    left:-1000px;
+  }
+
+  to {
+    left:0px;
+  }
+
+}
+
+.hamburger-menu-container.menuisopen {
+  animation: hamburgerslideopen ease-in-out 500ms;
+}
+
+/* Close menu animation */
+
+@keyframes hamburgerslideclose {
+
+  from {
+    left:0px;
+    display: flex;
+  }
+
+  to {
+    left:-1000px;
+    display: none;
+  }
+
+}
+
+.hamburger-menu-container.menuisclosed {
+  animation: hamburgerslideclose ease-in-out 500ms;
+}

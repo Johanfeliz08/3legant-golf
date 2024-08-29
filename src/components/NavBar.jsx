@@ -40,9 +40,9 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className={`background ${isMenuOpen ? "flex" : "sm:hidden"} sm:flex sm:fixed sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:z-50 sm:bg-[rgba(0,0,0,0.7)] `}>
+      <div className={`background ${isMenuOpen ? "flex menuisopen" : "menuisclosed sm:hidden sm:hamburgerslideclose"} sm:flex sm:fixed sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:z-50 sm:bg-[rgba(0,0,0,0.7)] `}>
         <div
-          className={` hamburger-menu-container sm:flex sm:fixed sm:flex-col sm:top-0 sm:left-0  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-screen sm:p-8 sm:justify-between sm:items-start md:w-[60%]
+          className={` hamburger-menu-container ${isMenuOpen ? "menuisopen" : "menuisclosed"} sm:flex sm:fixed sm:flex-col sm:top-0 sm:left-0  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-screen sm:p-8 sm:justify-between sm:items-start md:w-[60%]
              lg:flex-row lg:gap-14 lg:justify-center lg:items-center
             `}
         >
