@@ -40,12 +40,12 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className={`background ${isMenuOpen ? "flex menuisopen" : "menuisclosed sm:hidden sm:hamburgerslideclose md:hidden md:hamburgerslideclose"} sm:flex sm:fixed sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:z-50 sm:bg-[rgba(0,0,0,0.7)]
-       md:flex md:fixed md:top-0 md:left-0 md:w-screen md:h-screen md:z-50 md:bg-[rgba(0,0,0,0.7)]
+      <div className={`background ${isMenuOpen ? "menuisopen sm:bg-[rgba(0,0,0,.7)] md:bg-[rgba(0,0,0,.7)]" : "menuisclosed sm:hidden sm:hamburgerslideclose md:hidden md:hamburgerslideclose"} sm:flex sm:fixed sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:z-50
+       md:flex md:fixed md:top-0 md:left-0 md:w-screen md:h-screen md:z-50
       `}>
         <div
-          className={`hamburger-menu-container ${isMenuOpen ? "menuisopen" : "menuisclosed"} sm:flex sm:fixed sm:flex-col sm:top-0 sm:left-0  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-screen sm:p-8 sm:justify-between sm:items-start 
-            md:flex md:fixed md:flex-col md:top-0 md:left-0  md:bg-neutral-01 md:z-50  md:h-screen md:p-8 md:justify-between md:items-start
+          className={`hamburger-menu-container ${isMenuOpen ? "menuisopen" : "menuisclosed"} sm:flex sm:fixed sm:flex-col sm:top-0 sm:-left-[1000px]  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-screen sm:p-8 sm:justify-between sm:items-start 
+            md:flex md:fixed md:flex-col md:top-0 md:-left-[1000px]  md:bg-neutral-01 md:z-50  md:h-screen md:p-8 md:justify-between md:items-start
             md:w-[60%]
              lg:flex-row lg:gap-14 lg:justify-center lg:items-center
             `}

@@ -5,32 +5,14 @@
   /* Hamburger menu open animation */
 
   /* Animation for the background */
-  /* Open bg animation */
-
-  @keyframes bgopacity {
-    from {
-      background-color: rgba(0, 0, 0, 0);
-    }
-
-    to {
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-  }
-
-  .background.menuisopen {
-    animation: bgopacity linear 500ms;
-  }
-
   /* Close bg animation*/
 
   @keyframes bgopacityc {
     from {
-      background-color: rgba(0, 0, 0, 0.7);
       display: flex;
     }
 
     to {
-      background-color: rgba(0, 0, 0, 0);
       display: none;
     }
   }
@@ -54,25 +36,16 @@
 
   .hamburger-menu-container.menuisopen {
     animation: hamburgerslideopen ease-in-out 500ms;
+    left: 0px;
   }
 
   /* Close menu animation */
 
-  @keyframes hamburgerslideclose {
-    from {
-      left: 0px;
-      display: flex;
-    }
-
-    to {
-      left: -1000px;
-      display: none;
-    }
-  }
-
   .hamburger-menu-container.menuisclosed {
-    animation: hamburgerslideclose ease-in-out 500ms;
+    left: -1000px;
+    transition: ease-in-out 500ms;
   }
+
 }
 
 /* Medium screen size */
@@ -80,32 +53,14 @@
   /* Hamburger menu open animation */
 
   /* Animation for the background */
-  /* Open bg animation */
-
-  @keyframes bgopacity {
-    from {
-      background-color: rgba(0, 0, 0, 0);
-    }
-
-    to {
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-  }
-
-  .background.menuisopen {
-    animation: bgopacity linear 500ms;
-  }
-
   /* Close bg animation*/
 
   @keyframes bgopacityc {
     from {
-      background-color: rgba(0, 0, 0, 0.7);
       display: flex;
     }
 
     to {
-      background-color: rgba(0, 0, 0, 0);
       display: none;
     }
   }
@@ -129,23 +84,15 @@
 
   .hamburger-menu-container.menuisopen {
     animation: hamburgerslideopen ease-in-out 500ms;
+    left: 0px;
   }
 
   /* Close menu animation */
 
-  @keyframes hamburgerslideclose {
-    from {
-      left: 0px;
-      display: flex;
-    }
-
-    to {
-      left: -1000px;
-      display: none;
-    }
-  }
-
   .hamburger-menu-container.menuisclosed {
-    animation: hamburgerslideclose ease-in-out 500ms;
+    left: -1000px;
+    transition: ease-in-out 500ms;
   }
+
+
 }
