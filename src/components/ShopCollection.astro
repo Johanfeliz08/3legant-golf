@@ -1,0 +1,120 @@
+---
+import juniorset from "@/assets/images/collections/juniors-set.png";
+import menset from "@/assets/images/collections/men-set.png";
+import womenset from "@/assets/images/collections/women-set.png";
+import RightArrow from "@/assets/icons/Arrow-right.astro";
+
+import juniorset2 from "@/assets/images/collections/juniors-set2.png";
+import menset2 from "@/assets/images/collections/men-set2.png";
+import womenset2 from "@/assets/images/collections/women-set2.png";
+
+---
+
+<section class="shopcollection-container flex flex-col justify-start items-center w-full sm:px-2 sm:h-[1400px] sm:min-h-[1400px] md:px-16 md:h-[1400px] md:min-h-[1400px] lg:px-28 lg:h-[900px]">
+
+  <div class="section-header flex justify-start items-center py-12 sm:w-[70%] md:w-[70%] lg:w-[60%] lg:max-w-[990px] lg:min-w-[990px] ">
+      <h2 class="text-3xl lg:text-4xl font-medium">Shop Collection</h2>
+  </div>
+
+  <div class="collections flex justify-center items-center sm:flex-col sm:h-[1400px] sm:min-h-[1400px] sm:gap-5 md:flex-col md:w-full md:gap-5 md:h-[1400px] md:min-h-[1400px] lg:w-[60%] lg:flex-row h-[664px] lg:max-h-[664px] lg:max-w-[990px] lg:min-w-[990px] lg:gap-x-5">
+    <div class="left-column h-full sm:w-[70%] md:w-[70%] lg:w-[55%] lg:max-w-[448px]">
+      <div
+        id="junior-set"
+        class="bg-neutral-03 flex flex-col justify-end p-10 h-full w-full"
+      >
+        <div class="collection-image flex sm:h-[60%] md:h-[80%] md:w-full lg:h-[80%] lg:w-full ">
+          <img src={juniorset2.src} alt="Junior's set image" class="h-full w-full object-cover"/>
+        </div>
+        <div class="collection-info flex flex-col justify-center items-start gap-1">
+    
+          <h3 class="collection-title text-3xl font-medium">Juniors Set</h3>
+          <div class="link flex">
+            <a
+              href=""
+              class="flex flex-row justify-center items-center font-medium border-black border-solid border-b-2 gap-1 transition-colors"
+            >
+              <span>Collections</span>
+              <RightArrow
+                class="rightarrowicon stroke-accent-secondary size-5 transition-colors"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-column flex flex-col justify-between sm:w-[70%] sm:max-h-[664px] sm:gap-5 md:w-[70%] md:max-h-[664px] md:gap-5 lg:w-[55%] lg:max-w-[548px] h-full">
+      <div id="men-set" class="flex flex-row items-end bg-neutral-03 p-10 sm:h-[50%] md:h-[50%] lg:h-[319px] lg:max-h-[319px] lg:max-w-[548px] justify-between ">
+    
+        <div class="collection-info flex flex-col justify-center items-start gap-1">
+    
+          <h3 class="collection-title text-3xl font-medium">Men's Set</h3>
+          <div class="link flex">
+            <a
+              href=""
+              class="flex flex-row justify-center items-center font-medium border-black border-solid border-b-2 gap-1 transition-colors"
+            >
+              <span>Collections</span>
+              <RightArrow
+                class="rightarrowicon stroke-accent-secondary size-5 transition-colors"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="section-image sm:h-[80%] sm:w-[50%] md:h-full md:pr-14 lg:h-full lg:pr-14 ">
+          <img src={menset.src} alt="Mens's set image" class="h-full w-full object-contain" />
+        </div>
+      </div>
+
+      <div id="women-set" class="flex flex-row sm:h-[50%] md:h-[50%] lg:h-[319px] lg:max-h-[319px] lg:max-w-[548px] justify-between items-end bg-neutral-03 p-10">
+        <div class="collection-info flex flex-col w-1/2 justify-center items-start gap-1">
+    
+          <h3 class="collection-title text-3xl font-medium">Women's Set</h3>
+          <div class="link flex">
+            <a
+              href=""
+              class="flex flex-row justify-center items-center font-medium border-black border-solid border-b-2 gap-1 transition-colors"
+            >
+              <span>Collections</span>
+              <RightArrow
+                class="rightarrowicon stroke-accent-secondary size-5 transition-colors"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="section-image sm:h-[80%] sm:w-[50%] md:h-full md:pr-14 lg:h-full lg:pr-14 ">
+          <img src={womenset.src} alt="Women's set image" class="h-full w-full object-contain" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+
+  
+/* .title {
+    border: solid purple 1px;
+  }
+
+.section-header {
+    border: solid orange 1px;
+  }
+
+  .collections {
+    border: solid orange 1px;
+  } */
+/* 
+  #junior-set {
+    border: solid red 1px;
+  }
+
+  #men-set {
+    border: solid blue 1px;
+  }
+
+  #women-set {
+    border: solid aqua 1px;
+  } */
+
+</style>

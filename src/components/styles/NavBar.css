@@ -1,80 +1,151 @@
+/* Responsive design */
 
-/* Hamburger menu open animation */
+/* Small screen size */
+@media (max-width: 768px) {
+  /* Hamburger menu open animation */
 
-/* Animation for the background */
-/* Open bg animation */
+  /* Animation for the background */
+  /* Open bg animation */
 
-@keyframes bgopacity {
+  @keyframes bgopacity {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+    }
 
-  from {
-    background-color:rgba(0,0,0,0.0) ;
+    to {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
   }
 
-  to {
-    background-color:rgba(0,0,0,0.7) ;
+  .background.menuisopen {
+    animation: bgopacity linear 500ms;
   }
 
+  /* Close bg animation*/
+
+  @keyframes bgopacityc {
+    from {
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+    }
+
+    to {
+      background-color: rgba(0, 0, 0, 0);
+      display: none;
+    }
+  }
+
+  .background.menuisclosed {
+    animation: bgopacityc linear 500ms;
+  }
+
+  /* Animation for the menu - Slides in  */
+  /* Open menu animation */
+
+  @keyframes hamburgerslideopen {
+    from {
+      left: -1000px;
+    }
+
+    to {
+      left: 0px;
+    }
+  }
+
+  .hamburger-menu-container.menuisopen {
+    animation: hamburgerslideopen ease-in-out 500ms;
+  }
+
+  /* Close menu animation */
+
+  @keyframes hamburgerslideclose {
+    from {
+      left: 0px;
+      display: flex;
+    }
+
+    to {
+      left: -1000px;
+      display: none;
+    }
+  }
+
+  .hamburger-menu-container.menuisclosed {
+    animation: hamburgerslideclose ease-in-out 500ms;
+  }
 }
 
-.background.menuisopen {
-  animation: bgopacity linear 500ms;
-}
+/* Medium screen size */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Hamburger menu open animation */
 
-/* Close bg animation*/
+  /* Animation for the background */
+  /* Open bg animation */
 
-@keyframes bgopacityc {
+  @keyframes bgopacity {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+    }
 
-  from {
-    background-color:rgba(0,0,0,0.7);
-    display: flex;
+    to {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
   }
 
-  to {
-    background-color:rgba(0,0,0,0.0) ;
-    display:none;
+  .background.menuisopen {
+    animation: bgopacity linear 500ms;
   }
 
-}
+  /* Close bg animation*/
 
-.background.menuisclosed {
-  animation: bgopacityc linear 500ms;
-}
+  @keyframes bgopacityc {
+    from {
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+    }
 
-/* Animation for the menu - Slides in  */
-/* Open menu animation */
-
-@keyframes hamburgerslideopen {
-
-  from {
-    left:-1000px;
+    to {
+      background-color: rgba(0, 0, 0, 0);
+      display: none;
+    }
   }
 
-  to {
-    left:0px;
+  .background.menuisclosed {
+    animation: bgopacityc linear 500ms;
   }
 
-}
+  /* Animation for the menu - Slides in  */
+  /* Open menu animation */
 
-.hamburger-menu-container.menuisopen {
-  animation: hamburgerslideopen ease-in-out 500ms;
-}
+  @keyframes hamburgerslideopen {
+    from {
+      left: -1000px;
+    }
 
-/* Close menu animation */
-
-@keyframes hamburgerslideclose {
-
-  from {
-    left:0px;
-    display: flex;
+    to {
+      left: 0px;
+    }
   }
 
-  to {
-    left:-1000px;
-    display: none;
+  .hamburger-menu-container.menuisopen {
+    animation: hamburgerslideopen ease-in-out 500ms;
   }
 
-}
+  /* Close menu animation */
 
-.hamburger-menu-container.menuisclosed {
-  animation: hamburgerslideclose ease-in-out 500ms;
+  @keyframes hamburgerslideclose {
+    from {
+      left: 0px;
+      display: flex;
+    }
+
+    to {
+      left: -1000px;
+      display: none;
+    }
+  }
+
+  .hamburger-menu-container.menuisclosed {
+    animation: hamburgerslideclose ease-in-out 500ms;
+  }
 }
