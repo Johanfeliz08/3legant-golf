@@ -9,7 +9,7 @@ import MockData from "@/utils/MockData.json";
 /* 2. Call the function and pass the parameter you want to filter the data by */
 // Ex: const res = getBy("items");
 
-// Returns the main categories which are: "categories" and "items"
+// Returns the main categories which are: "categories", "items" or "articles"
 // PD: The other methods depends on this one
 
 export const getBy = (param) => {
@@ -59,4 +59,15 @@ export const getCategoriesPropertyValues = (param) => {
 
   return categories;
 };
+
+/* Methods for articles */
+
+export const getLatestArticles = () => {
+
+  const latestArticles = getBy("articles").slice(-3)
+  return latestArticles; 
+}
+
+
+
 ---

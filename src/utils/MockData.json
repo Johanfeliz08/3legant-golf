@@ -290,8 +290,8 @@
         "id":4,
         "name":"Clothing & Rainwear",
         "image":"src/assets/images/categories/clothing&rainwear.png"
-      }
-      ,      {
+      },      
+      {
         "id":5,
         "name":"Footwear",
         "image":"src/assets/images/categories/footwear.png"
@@ -300,6 +300,32 @@
         "id":6,
         "name":"Accesories",
         "image":"src/assets/images/categories/accesories.png"
+      }
+    ],
+    "articles":[
+      {
+        "id":1,
+        "title":"Air Jordan x Travis Scott Event",
+        "image":"src/assets/images/articles/airjordanxtravis.png",
+        "date":""
+      },
+      {
+        "id":2,
+        "title":"Air Jordan x Travis Scott Event",
+        "image":"src/assets/images/articles/airjordanxtravis.png",
+        "date":""
+      },
+      {
+        "id":3,
+        "title":"The timeless classics on the green",
+        "image":"src/assets/images/articles/timeless.png",
+        "date":""
+      },      
+      {
+        "id":4,
+        "title":"The 2023 Ryder Cup",
+        "image":"src/assets/images/articles/rydercup.png",
+        "date":""
       }
     ]
 

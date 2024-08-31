@@ -1,0 +1,67 @@
+---
+import { getLatestArticles } from "@/services/3legant.astro";
+import RightArrow from "@/assets/icons/Arrow-right.astro";
+
+// Data
+const latestArticles = getLatestArticles();
+---
+
+<section
+  class="latest-article-container w-full sm:px-12 sm:h-[1600px] sm:min-h-[1600px] md:h-[1600px] md:min-h-[1600px] md:px-32 lg:h-[800px] lg:min-h-[800px]  lg:px-40 lg:pb-12"
+>
+  <header
+    class="articles-header flex flex-row justify-between items-center w-full py-12"
+  >
+    <h2 class="font-medium text-accent-secondary sm:text-3xl md:text-4xl lg:text-4xl ">Latest Articles</h2>
+    <div class="link flex">
+      <a
+        href=""
+        class="flex flex-row justify-center items-center font-medium border-black border-solid border-b-2 gap-1 transition-colors"
+      >
+        <span>View More</span>
+        <RightArrow
+          class="rightarrowicon stroke-accent-secondary size-5 transition-colors"
+        />
+      </a>
+    </div>
+  </header>
+
+  <div class="articles flex w-full h-auto gap-5 sm:flex-col sm:items-center md:flex-col md:items-center lg:flex-row lg:justify-between lg:items-start">
+    {
+      latestArticles.map((article) => (
+        <article id={article.id} class="lg:w-[450px] lg:min-w-[200px] lg:min-h-full">
+          <div class="image w-full h-full aspect-square">
+            <img src={article.image} alt={`${article.title} image`} class="image w-full h-full" />
+          </div>
+          <div class="info">
+            <div class="title py-5 font-medium">
+            <h3 class="md:text-xl lg:text-2xl">{article.title}</h3>
+          </div>
+          <div class="link flex w-fit">
+            <a
+              href=""
+              class="flex flex-row justify-center items-center font-medium border-black border-solid border-b-2 gap-1 transition-colors"
+            >
+              <span>Read More</span>
+              <RightArrow class="rightarrowicon stroke-accent-secondary size-5 transition-colors" />
+            </a>
+          </div>
+          </div>
+          
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+   
+   .link:hover {
+    color: var(--accent-primary);
+
+    .rightarrowicon{
+      stroke: var(--accent-primary);
+    }
+
+  }
+</style>
