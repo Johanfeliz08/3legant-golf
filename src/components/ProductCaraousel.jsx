@@ -30,7 +30,16 @@ const ProductCaraousel = () => {
       const x = e.pageX - scrollerRef.current.offsetLeft; // Get the final position of the mouse in reference of the scroller container
       const walk = (x - startX) * 1.5; // Calculate the displacement of the mouse by subtracting the final position and the initial position - Multiply by 1.5 increase the speed of the scroll
       scrollerRef.current.scrollLeft = scrollLeft - walk; // Set the horizontal scrollbar position to the new position
+      
+      // Scroll porcentage
+
+      const maxScrollLeft = scrollerRef.current.scrollWidth - scrollerRef.current.clientWidth;
+      const currentScrollLeft = scrollerRef.current.scrollLeft;
+      const scrollPerc = (currentScrollLeft / maxScrollLeft) * 100;
+      setScrollPercentage(scrollPerc);
+
     }
+
   };
 
   const handleMouseUp = () => { // Mouse click has been release
