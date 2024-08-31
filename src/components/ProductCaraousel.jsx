@@ -101,8 +101,8 @@ const ProductCaraousel = () => {
   };
 
   return (
-    <section className="flex flex-col items-end gap-y-9 carousel-container min-h-fit pl-32 w-full">
-      <header className="section-header flex flex-row justify-between items-center w-full min-w-full">
+    <section className="carousel-container flex flex-col items-end min-h-fit py-12 w-full sm:pl-12 md:pl-32 lg:pl-40">
+      <header className="section-header flex flex-row justify-between items-center w-full min-w-full py-12">
         <div className="section-title">
           <h2 className="text-4xl font-medium">Featured</h2>
         </div>
@@ -113,7 +113,7 @@ const ProductCaraousel = () => {
 
       <div
         ref={scrollerRef}
-        className={`scroller overscroll-none flex flex-row gap-x-12 w-full h-[550px] overflow-scroll ${
+        className={`scroller overscroll-none flex flex-row w-full h-[550px] overflow-scroll sm:gap-x-4 md:gap-x-12 lg:gap-x-12 ${
           isDragging ? "dragging" : null
         }`}
         onMouseDown={handleMouseDown}
