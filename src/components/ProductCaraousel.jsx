@@ -101,12 +101,12 @@ const ProductCaraousel = () => {
   };
 
   return (
-    <section className="flex flex-col items-end gap-y-9 carousel-container min-h-fit pl-28 py-10 w-full">
+    <section className="flex flex-col items-end gap-y-9 carousel-container min-h-fit pl-32 w-full">
       <header className="section-header flex flex-row justify-between items-center w-full min-w-full">
         <div className="section-title">
           <h2 className="text-4xl font-medium">Featured</h2>
         </div>
-        <div className="pagination flex flex-row gap-1 md:pr-44">
+        <div className="pagination flex flex-row gap-1 md:pr-44 lg:pr-44">
           {handlePagination()}
         </div>
       </header>
