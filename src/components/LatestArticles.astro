@@ -7,10 +7,10 @@ const latestArticles = getLatestArticles();
 ---
 
 <section
-  class="latest-article-container w-full sm:px-12 sm:h-[1600px] sm:min-h-[1600px] md:h-[1600px] md:min-h-[1600px] md:px-32 lg:h-[800px] lg:min-h-[800px]  lg:px-40 lg:pb-12"
+  class="latest-article-container flex flex-col justify-center items-center w-full sm:px-12 sm:h-[1600px] sm:min-h-[1600px] md:h-[1600px] md:min-h-[1600px] md:px-32 lg:h-[800px] lg:min-h-[800px]  lg:px-40 lg:pb-12"
 >
   <header
-    class="articles-header flex flex-row justify-between items-center w-full py-12"
+    class="articles-header flex flex-row justify-between items-center w-[80%] py-12"
   >
     <h2 class="font-medium text-accent-secondary sm:text-3xl md:text-4xl lg:text-4xl ">Latest Articles</h2>
     <div class="link flex">
@@ -26,11 +26,11 @@ const latestArticles = getLatestArticles();
     </div>
   </header>
 
-  <div class="articles flex w-full h-auto gap-5 sm:flex-col sm:items-center md:flex-col md:items-center lg:flex-row lg:justify-between lg:items-start">
+  <div class="articles flex w-[80%] h-auto gap-5 sm:flex-col sm:items-center md:flex-col md:items-center lg:flex-row lg:gap-12 lg:justify-center lg:items-start">
     {
       latestArticles.map((article) => (
-        <article id={article.id} class="lg:w-[450px] lg:min-w-[200px] lg:min-h-full">
-          <div class="image w-full h-full aspect-square">
+        <article id={article.id} class="lg:w-[400px] lg:min-w-[200px] lg:min-h-full">
+          <div class="image w-full h-auto aspect-square">
             <img src={article.image} alt={`${article.title} image`} class="image w-full h-full" />
           </div>
           <div class="info">
