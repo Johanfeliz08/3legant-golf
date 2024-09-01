@@ -7,10 +7,10 @@ const latestArticles = getLatestArticles();
 ---
 
 <section
-  class="latest-article-container flex flex-col justify-center items-center w-full sm:px-12 sm:h-[1600px] sm:min-h-[1600px] md:h-[1600px] md:min-h-[1600px] md:px-32 lg:h-[800px] lg:min-h-[800px]  lg:px-40 lg:pb-12"
+  class="latest-article-container flex flex-col justify-center items-center w-full sm:px-12 sm:pb-12 md:px-32 md:pb-12 lg:px-40 lg:pb-12"
 >
   <header
-    class="articles-header flex flex-row justify-between items-center w-[80%] py-12"
+    class="articles-header flex flex-row justify-between items-center w-[80%] max-w-[1280px] py-12"
   >
     <h2 class="font-medium text-accent-secondary sm:text-3xl md:text-4xl lg:text-4xl ">Latest Articles</h2>
     <div class="link flex">
@@ -18,7 +18,7 @@ const latestArticles = getLatestArticles();
         href=""
         class="flex flex-row justify-center items-center font-medium border-black border-solid border-b-2 gap-1 transition-colors"
       >
-        <span>View More</span>
+        <span class=" text-nowrap">View More</span>
         <RightArrow
           class="rightarrowicon stroke-accent-secondary size-5 transition-colors"
         />

@@ -1,0 +1,54 @@
+---
+import glove from "@/assets/images/newsletter/glove.png";
+import stick from "@/assets/images/newsletter/stick.png";
+
+import glove2 from "@/assets/images/newsletter/glove2.png";
+import stick2 from "@/assets/images/newsletter/stick2.png";
+---
+
+<section class="newsletter relative flex flex-row justify-between items-center w-full bg-accent-secondary overflow-hidden sm:justify-center">
+  <div class="image-left relative sm:hidden md:top-7 overflow-hidden">
+    <img src={glove2.src} alt="h-full w-full" />
+  </div>
+
+  <div class="info flex flex-col justify-center items-center gap-2 w-[60%] sm:py-12 md:pt-12 md:pb-8 lg:py-12">
+    <h2 class="text-neutral-01 font-medium text-nowrap sm:text-3xl md:text-4xl lg:text-4xl ">Join Our Newsletter</h2>
+    <span class="text-neutral-03 text-nowrap">Sign up for deals, new products and promotions</span>
+
+    <div class="email flex flex-row justify-between items-center w-[70%] min-w-[300px] border border-solid border-b border-b-neutral-01 py-2 m-4">
+      <div class="left flex flex-row justify-center items-center">
+        <div class="icon pr-2">
+          <svg
+            class=" fill-neutral-01 size-8"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g data-name="Layer 2">
+              <g data-name="email">
+                <rect width="24" height="24" opacity="0"></rect>
+  
+                <path
+                  d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.67 2L12 10.75 5.67 6zM19 18H5a1 1 0 0 1-1-1V7.25l7.4 5.55a1 1 0 0 0 .6.2 1 1 0 0 0 .6-.2L20 7.25V17a1 1 0 0 1-1 1z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+  
+        <div class="input">
+          <input type="email" name="" id="" placeholder="Email address" class="text-neutral-01 placeholder-neutral-01 bg-accent-secondary outline-none" />
+        </div>
+      </div>
+      <div class="right">
+        <div class="sign-button">
+          <button class="text-neutral-01">Signup</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="image-right w-[500px] h-full top-16 relative sm:hidden">
+    <img src={stick2.src} alt="" class="w-full h-auto" />
+  </div>
+</section>
