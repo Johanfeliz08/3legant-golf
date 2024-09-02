@@ -44,7 +44,7 @@ const NavBar = () => {
        md:flex md:fixed md:top-0 md:left-0 md:w-screen md:h-screen md:z-50
       `}>
         <div
-          className={`hamburger-menu-container ${isMenuOpen ? "menuisopen" : "menuisclosed"} sm:flex sm:fixed sm:flex-col sm:top-0 sm:-left-[1000px]  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-screen sm:p-8 sm:justify-between sm:items-start 
+          className={`hamburger-menu-container ${isMenuOpen ? "menuisopen" : "menuisclosed"} sm:flex sm:fixed sm:flex-col sm:top-0 sm:-left-[1000px]  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-dvh sm:p-8 sm:justify-between sm:items-start 
             md:flex md:fixed md:flex-col md:top-0 md:-left-[1000px]  md:bg-neutral-01 md:z-50  md:h-screen md:p-8 md:justify-between md:items-start
             md:w-[60%]
              lg:flex-row lg:gap-14 lg:justify-center lg:items-center
