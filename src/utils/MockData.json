@@ -4,7 +4,7 @@
     "items":[
       {
         "id":1,
-        "image":"src/assets/images/item-images/glove1.png",
+        "image":"/item-images/glove1.png",
         "name":"glove1",
         "rating":1,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -19,7 +19,7 @@
       },
       {
         "id":2,
-        "image":"src/assets/images/item-images/glove2.png",
+        "image":"/item-images/glove2.png",
         "name":"glove2",
         "rating":2,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -33,7 +33,7 @@
       },
       {
         "id":3,
-        "image":"src/assets/images/item-images/shoes1.png",
+        "image":"/item-images/shoes1.png",
         "name":"shoes1",
         "rating":3,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -47,7 +47,7 @@
       },
       {
         "id":4,
-        "image":"src/assets/images/item-images/stickbag.png",
+        "image":"/item-images/stickbag.png",
         "name":"stickbag",
         "rating":4,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -61,7 +61,7 @@
       },
       {
         "id":5,
-        "image":"src/assets/images/item-images/t-shirt1.png",
+        "image":"/item-images/t-shirt1.png",
         "name":"t-shirt1",
         "rating":5,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -75,7 +75,7 @@
       },
       {
         "id":6,
-        "image":"src/assets/images/item-images/t-shirt1.png",
+        "image":"/item-images/t-shirt1.png",
         "name":"t-shirt1",
         "rating":5,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -89,7 +89,7 @@
       },
       {
         "id":7,
-        "image":"src/assets/images/item-images/t-shirt1.png",
+        "image":"/item-images/t-shirt1.png",
         "name":"t-shirt1",
         "rating":5,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -103,7 +103,7 @@
       },
       {
         "id":8,
-        "image":"src/assets/images/item-images/shoes1.png",
+        "image":"/item-images/shoes1.png",
         "name":"shoes1",
         "rating":3,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -117,7 +117,7 @@
       },
       {
         "id":9,
-        "image":"src/assets/images/item-images/shoes1.png",
+        "image":"/item-images/shoes1.png",
         "name":"shoes1",
         "rating":3,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -131,7 +131,7 @@
       },
       {
         "id":10,
-        "image":"src/assets/images/item-images/shoes1.png",
+        "image":"/item-images/shoes1.png",
         "name":"shoes1",
         "rating":3,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -144,7 +144,7 @@
         "category_id":5
       },{
         "id":11,
-        "image":"src/assets/images/item-images/stickbag.png",
+        "image":"/item-images/stickbag.png",
         "name":"stickbag",
         "rating":4,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -157,7 +157,7 @@
         "category_id":3
       },{
         "id":12,
-        "image":"src/assets/images/item-images/stickbag.png",
+        "image":"/item-images/stickbag.png",
         "name":"stickbag",
         "rating":4,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -170,7 +170,7 @@
         "category_id":3
       },{
         "id":13,
-        "image":"src/assets/images/item-images/glove2.png",
+        "image":"/item-images/glove2.png",
         "name":"glove2",
         "rating":2,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -184,7 +184,7 @@
       },
       {
         "id":14,
-        "image":"src/assets/images/item-images/golf-club.png",
+        "image":"/item-images/golf-club.png",
         "name":"golf club",
         "rating":2,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -198,7 +198,7 @@
       },
       {
         "id":15,
-        "image":"src/assets/images/item-images/golf-club.png",
+        "image":"/item-images/golf-club.png",
         "name":"golf club",
         "rating":2,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -212,7 +212,7 @@
       },
       {
         "id":16,
-        "image":"src/assets/images/item-images/golf-club.png",
+        "image":"/item-images/golf-club.png",
         "name":"golf club",
         "rating":2,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -226,7 +226,7 @@
       },
       {
         "id":17,
-        "image":"src/assets/images/item-images/balls1.png",
+        "image":"/item-images/balls1.png",
         "name":"balls1",
         "rating":2,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -240,7 +240,7 @@
       },
       {
         "id":18,
-        "image":"src/assets/images/item-images/balls1.png",
+        "image":"/item-images/balls1.png",
         "name":"balls1",
         "rating":2,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -254,7 +254,7 @@
       },
       {
         "id":19,
-        "image":"src/assets/images/item-images/balls1.png",
+        "image":"/item-images/balls1.png",
         "name":"balls1",
         "rating":2,
         "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -274,57 +274,57 @@
       {
         "id":1,
         "name":"Golf Clubs",
-        "image":"src/assets/images/categories/golf-clubs.png"
+        "image":"/categories/golf-clubs.png"
       },
       {
         "id":2,
         "name":"Golf Balls",
-        "image":"src/assets/images/categories/golf-balls.png"
+        "image":"/categories/golf-balls.png"
       },
       {
         "id":3,
         "name":"Golf Bags",
-        "image":"src/assets/images/categories/golf-bags.png"
+        "image":"/categories/golf-bags.png"
       },
       {
         "id":4,
         "name":"Clothing & Rainwear",
-        "image":"src/assets/images/categories/clothing&rainwear.png"
+        "image":"/categories/clothing&rainwear.png"
       },      
       {
         "id":5,
         "name":"Footwear",
-        "image":"src/assets/images/categories/footwear.png"
+        "image":"/categories/footwear.png"
       },
       {
         "id":6,
         "name":"Accesories",
-        "image":"src/assets/images/categories/accesories.png"
+        "image":"/categories/accesories.png"
       }
     ],
     "articles":[
       {
         "id":1,
         "title":"Air Jordan x Travis Scott Event",
-        "image":"src/assets/images/articles/airjordanxtravis.png",
+        "image":"/articles/airjordanxtravis.png",
         "date":""
       },
       {
         "id":2,
         "title":"Air Jordan x Travis Scott Event",
-        "image":"src/assets/images/articles/airjordanxtravis.png",
+        "image":"/articles/airjordanxtravis.png",
         "date":""
       },
       {
         "id":3,
         "title":"The timeless classics on the green",
-        "image":"src/assets/images/articles/timeless.png",
+        "image":"/articles/timeless.png",
         "date":""
       },      
       {
         "id":4,
         "title":"The 2023 Ryder Cup",
-        "image":"src/assets/images/articles/rydercup.png",
+        "image":"/articles/rydercup.png",
         "date":""
       }
     ]

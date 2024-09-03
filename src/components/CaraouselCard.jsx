@@ -1,5 +1,6 @@
 import React from "react";
 
+// Card component
 import "@/components/styles/CaraouselCard.css";
 
 const CaraouselCard = ({
@@ -14,6 +15,7 @@ const CaraouselCard = ({
   discount,
   category_id,
 }) => {
+
   const handleRating = (rating) => {
     if (rating > 0) {
       return Array.from({ length: rating }, (_, i) => (
