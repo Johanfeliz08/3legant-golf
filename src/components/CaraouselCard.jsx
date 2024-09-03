@@ -99,7 +99,7 @@ const CaraouselCard = ({
             {handleRating(rating)}
           </div>
 
-          <span className="name-description font-bold text-md w-full text-balance">
+          <span className="name-description font-[600] text-md w-full text-balance line-clamp-2">
             {name + " - " + description}
           </span>
           <div className="price flex flex-row gap-3">
