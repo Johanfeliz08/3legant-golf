@@ -60,6 +60,16 @@ const ProductCaraousel = () => {
     }
   };
 
+  const handleTouchMove = () => { // Calc the scroll porcentage and then update dynamically the pagination - For mobile
+    
+    // Scroll porcentage
+    const maxScrollLeft = scrollerRef.current.scrollWidth - scrollerRef.current.clientWidth;
+    const currentScrollLeft = scrollerRef.current.scrollLeft;
+    const scrollPerc = (currentScrollLeft / maxScrollLeft) * 100;
+    setScrollPercentage(scrollPerc);
+
+  }
+
   const handlePagination = () => {
     const pagQuantity = Math.ceil(itemsData.length / 5); // Render a pagination item for each 5 products, using Math.Ceil to manage decimals.
 
@@ -129,6 +139,7 @@ const ProductCaraousel = () => {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
         onWheel={handleScroll}
+        onTouchMove={handleTouchMove}
       >
         {itemsData.map((item) => (
           <div
