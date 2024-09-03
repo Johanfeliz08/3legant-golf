@@ -37,6 +37,36 @@ const CaraouselCard = ({
     }
   };
 
+  const handleDiscount = (price,discount) => {
+
+    let finalPrice; 
+    const originalPrice = price; 
+
+    const USDollar = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
+    
+    if(hasDiscount) {
+
+      const finalDiscount = price * (discount / 100)
+      finalPrice = price - finalDiscount
+
+    } else {
+      finalPrice = price
+    }
+
+  
+    return (
+      <>
+        <span className="price font-bold text-md">{`${USDollar.format(finalPrice)}`}</span>
+        {hasDiscount ? <span className="original-price font-regular text-neutral-04 text-md line-through">{`${USDollar.format(originalPrice)}`}</span> : null }
+      </>
+    )
+
+
+  }
+
   return (
     <>
       <article className="item-card max-w-72 h-full max-h-full px-2 py-4 border-solid border border-neutral-01 transition-all hover:border-solid hover:border hover:border-accent-secondary">
@@ -69,11 +99,12 @@ const CaraouselCard = ({
             {handleRating(rating)}
           </div>
 
-          <span className="name-description font-medium text-md w-full text-balance">
+          <span className="name-description font-bold text-md w-full text-balance">
             {name + " - " + description}
           </span>
-
-          <span className="price font-medium text-md">{`$ ${price}`}</span>
+          <div className="price flex flex-row gap-3">
+            {handleDiscount(price,discount)}
+          </div>
         </div>
       </article>
     </>
