@@ -113,7 +113,7 @@ const NavBar = () => {
             <li className={` font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5
               md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5
               `}>
-                <a href="">Home</a>
+                <a href="/#">Home</a>
               </li>
               <li className={` font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5
               md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5
