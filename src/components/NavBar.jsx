@@ -7,7 +7,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className={`navbar flex flex-row justify-between items-center px-14 py-3`}>
+    <nav className={`navbar flex flex-row justify-between items-center py-3 sm:px-6 md:px-14 lg:px-14`}>
       <div className="left-column-hamburger flex flex-row justify-center items-center gap-1">
         <div className="hambugericon p-2 lg:hidden">
           <label htmlFor="hamburgercb">
