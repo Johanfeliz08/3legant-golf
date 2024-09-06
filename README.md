@@ -3,7 +3,7 @@
 > 🏌️‍♂️ More than just a game. It's a lifestyle.
 
 <img src="https://i.imgur.com/8Diggqc.jpg" alt="project banner">
-<a href="https://github.com/Johanfeliz08/3legant-golf" target="_blank">
+<a href="https://3legant-golf.netlify.app/" target="_blank">
 <img src="https://img.shields.io/badge/LIVE_PREVIEW-38c988?style=for-the-badge&logo=googlechrome&logoColor=white">
 </a>
 
