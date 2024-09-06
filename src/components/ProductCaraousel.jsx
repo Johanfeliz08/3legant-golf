@@ -62,12 +62,13 @@ const ProductCaraousel = () => {
 
   const handleTouchMove = () => { // Calc the scroll porcentage and then update dynamically the pagination - For mobile
     
-    // Scroll porcentage
-    const maxScrollLeft = scrollerRef.current.scrollWidth - scrollerRef.current.clientWidth;
-    const currentScrollLeft = scrollerRef.current.scrollLeft;
-    const scrollPerc = (currentScrollLeft / maxScrollLeft) * 100;
-    setScrollPercentage(scrollPerc);
+    if (scrollerRef.current) { // Make sure the scroller container is rendered in the dom
 
+      const maxScrollLeft = scrollerRef.current.scrollWidth - scrollerRef.current.clientWidth; // Get the total amount of scroll posible in the scroller component
+      const currentScrollLeft = scrollerRef.current.scrollLeft; // Set the current position of the horizontal scroll
+      const scrollPerc = (currentScrollLeft / maxScrollLeft) * 100; // Calculate the % dividing the current position by the total and multiplying by 100
+      setScrollPercentage(scrollPerc);
+    }
   }
 
   const handlePagination = () => {
