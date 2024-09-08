@@ -120,7 +120,7 @@ const ProductCaraousel = () => {
   };
 
   return (
-    <section className="carousel-container flex flex-col items-end min-h-fit py-12 w-full sm:pl-12 md:pl-32 lg:pl-40">
+    <section className="carousel-container flex flex-col items-end min-h-fit py-12 w-full sm:pl-8 md:pl-32 lg:pl-40">
       <header className="section-header flex flex-row justify-between items-center w-full min-w-full py-12">
         <div className="section-title">
           <h2 className="text-4xl font-[600]">Featured</h2>
