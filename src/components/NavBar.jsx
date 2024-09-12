@@ -181,16 +181,13 @@ const NavBar = () => {
                     className={`dropdown-menu hidden absolute top-full mt-[2px] left-0 w-52 bg-neutral-01`}
                   >
                     <li className="item p-2">
-                      <a href="">Item 1</a>
+                      <a href="">Juniors set</a>
                     </li>
                     <li className="item p-2">
-                      <a href="">Item 2</a>
+                      <a href="">Men's set</a>
                     </li>
                     <li className="item p-2">
-                      <a href="">Item 3</a>
-                    </li>
-                    <li className="item p-2">
-                      <a href="">Item 4</a>
+                      <a href="">Women's set</a>
                     </li>
                   </ul>
                 </label>
