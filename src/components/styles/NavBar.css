@@ -1,3 +1,13 @@
+/* Common styles */
+
+.navitems .nav-element {
+  @apply flex justify-center items-center font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5 md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5 cursor-pointer;
+}
+
+.navitems .nav-element.drop-down label {
+  @apply cursor-pointer;
+}
+
 /* Responsive design */
 
 /* Small screen size */
@@ -45,7 +55,6 @@
     left: -1000px;
     transition: ease-in-out 500ms;
   }
-
 }
 
 /* Medium screen size */
@@ -93,6 +102,91 @@
     left: -1000px;
     transition: ease-in-out 500ms;
   }
+}
 
+/* Large screen size */
 
+@media (min-width: 1025px) {
+  nav.navbar {
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.19);
+  }
+
+  /* DropDown menu's style */
+
+  /*Add an invisible border to avoid jump when :hover  */
+
+  .navitems .nav-element {
+    padding: 4px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }
+
+  .navitems .nav-element:hover {
+    border-bottom: 2px solid rgba(56, 203, 137, 1);
+    transition: all ease 500ms;
+  }
+
+  .dropdown-menu {
+    border-top: 2px solid rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.14);
+    animation: closeDropDown ease 200ms;
+  }
+
+  /* Dropdown show animation  */
+
+  @keyframes showDropDown {
+    from {
+      display: none;
+      opacity: 0;
+    }
+
+    to {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  /* Dropdown close animation  */
+
+  @keyframes closeDropDown {
+    from {
+      display: block;
+      opacity: 1;
+    }
+
+    to {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  .navitems .drop-down:hover {
+    .dropdown-menu {
+      display: block;
+      opacity: 1;
+      animation: showDropDown ease 500ms;
+    }
+
+    .dropdown-menu:hover {
+      display: block;
+    }
+
+    .arrow-icon {
+      stroke: var(--accent-primary);
+      transform: rotate(180deg);
+      transition: transform ease 400ms;
+    }
+  }
+
+  .arrow-icon {
+    transition: transform ease 400ms;
+  }
+
+  .drop-down .dropdown-menu .item:hover {
+    color: rgba(56, 203, 137, 1);
+    transition: all ease 200ms;
+  }
 }

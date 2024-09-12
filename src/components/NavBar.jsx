@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
 import "@/components/styles/NavBar.css";
 
 const NavBar = () => {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isShopMenuOpen, setIsShopMenuOpen] = useState(false);
+  // const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
 
   return (
-    <nav className={`navbar flex flex-row justify-between items-center py-3 sm:px-6 md:px-14 lg:px-14`}>
+    <nav
+      className={`navbar flex flex-row justify-between items-center py-1 sm:px-6 md:px-14 lg:px-14`}
+    >
       <div className="left-column-hamburger flex flex-row justify-center items-center gap-1">
         <div className="hambugericon p-2 lg:hidden">
           <label htmlFor="hamburgercb">
@@ -36,24 +39,42 @@ const NavBar = () => {
           </label>
         </div>
         <div className="logo">
-        <a href="/#"><span className="text-xl font-bold">3legant.</span></a>
+          <a href="/#">
+            <span className="text-xl font-bold">3legant.</span>
+          </a>
         </div>
       </div>
 
-      <div className={`background ${isMenuOpen ? "menuisopen sm:bg-[rgba(0,0,0,.7)] md:bg-[rgba(0,0,0,.7)]" : "menuisclosed sm:hidden sm:hamburgerslideclose md:hidden md:hamburgerslideclose"} sm:flex sm:fixed sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:z-50
+      <div
+        className={`background ${
+          isMenuOpen
+            ? "menuisopen sm:bg-[rgba(0,0,0,.7)] md:bg-[rgba(0,0,0,.7)]"
+            : "menuisclosed sm:hidden sm:hamburgerslideclose md:hidden md:hamburgerslideclose"
+        } sm:flex sm:fixed sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:z-50
        md:flex md:fixed md:top-0 md:left-0 md:w-screen md:h-screen md:z-50
-      `}>
+      `}
+      >
         <div
-          className={`hamburger-menu-container ${isMenuOpen ? "menuisopen" : "menuisclosed"} sm:flex sm:fixed sm:flex-col sm:top-0 sm:-left-[1000px]  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-dvh sm:p-8 sm:justify-between sm:items-start 
+          className={`hamburger-menu-container ${
+            isMenuOpen ? "menuisopen" : "menuisclosed"
+          } sm:flex sm:fixed sm:flex-col sm:top-0 sm:-left-[1000px]  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-dvh sm:p-8 sm:justify-between sm:items-start 
             md:flex md:fixed md:flex-col md:top-0 md:-left-[1000px]  md:bg-neutral-01 md:z-50  md:h-screen md:p-8 md:justify-between md:items-start
             md:w-[60%]
              lg:flex-row lg:gap-14 lg:justify-center lg:items-center
             `}
         >
-          <div className={`top sm:flex sm:flex-col sm:w-full sm:gap-y-4 md:flex md:flex-col md:w-full md:gap-y-4`}>
-            <div className={`close-bar sm:flex sm:flex-row sm:justify-between sm:w-full sm:py-2 md:flex md:flex-row md:justify-between md:w-full md:py-2 lg:hidden` }>
+          <div
+            className={`top sm:flex sm:flex-col sm:w-full sm:gap-y-4 md:flex md:flex-col md:w-full md:gap-y-4`}
+          >
+            <div
+              className={`close-bar sm:flex sm:flex-row sm:justify-between sm:w-full sm:py-2 md:flex md:flex-row md:justify-between md:w-full md:py-2 lg:hidden`}
+            >
               <div className={`logo sm:flex md:flex lg:hidden`}>
-                <span className={`sm:text-xl sm:font-bold md:text-xl md:font-bold lg:hidden`}>3legant.</span>
+                <span
+                  className={`sm:text-xl sm:font-bold md:text-xl md:font-bold lg:hidden`}
+                >
+                  3legant.
+                </span>
               </div>
               <div className={`closeicon sm:flex md:flex lg:hidden`}>
                 <label htmlFor="hamburger-close-cb">
@@ -82,9 +103,11 @@ const NavBar = () => {
               </div>
             </div>
 
-            <div className={`search-bar sm:flex sm:flex-row sm:gap-3 sm:p-5 sm:border sm:border-solid sm:border-accent-secondary sm:rounded-md 
+            <div
+              className={`search-bar sm:flex sm:flex-row sm:gap-3 sm:p-5 sm:border sm:border-solid sm:border-accent-secondary sm:rounded-md 
               md:flex md:flex-row md:gap-3 md:p-5 md:border md:border-solid md:border-accent-secondary md:rounded-md
-              lg:hidden`}>
+              lg:hidden`}
+            >
               <svg
                 className={`hidden sm:flex sm:size-6 md:flex md:size-6`}
                 viewBox="0 0 24 24"
@@ -109,68 +132,134 @@ const NavBar = () => {
               />
             </div>
 
-            <ul className={`navitems sm:flex sm:flex-col sm:w-full md:flex md:flex-col md:w-full lg:flex lg:gap-10 lg:py-4`}>
-            <li className={` font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5
-              md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5
-              `}>
+            <ul
+              className={`navitems sm:flex sm:flex-col sm:w-full md:flex md:flex-col md:w-full lg:flex lg:gap-10 lg:py-4`}
+            >
+              <li
+                className={`nav-element
+              `}
+              >
                 <a href="/#">Home</a>
               </li>
-              <li className={` font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5
-              md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5
-              `}>
-                <a href="" className="flex flex-row gap-1 sm:justify-between md:justify-between">
+              <li
+                className={`nav-element drop-down relative flex flex-row gap-1 sm:justify-between md:justify-between lg:justify-center lg:items-center
+              `}
+              >
+                <label htmlFor="cbshop" className="flex flex-row gap-x-2">
+                  <input
+                    type="checkbox"
+                    name="dropdown"
+                    id="cbshop"
+                    className="hidden"
+                    // onChange={(e) => setIsShopMenuOpen(e.target.checked)}
+                  />
                   <span>Shop</span>
-                  <svg
-                    className=" stroke-accent-secondary lg:size-6 sm:size-8 md:size-8"
-                    width="19"
-                    height="18"
-                    viewBox="0 0 19 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div className="svg-container flex justify-center items-center">
+                    <svg
+                      className="arrow-icon stroke-accent-secondary lg:size-6 sm:size-8 md:size-8"
+                      width="19"
+                      height="18"
+                      viewBox="0 0 19 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.2041 6.75L9.7041 11.25L14.2041 6.75"
+                        stroke-witdh="1.125"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></path>
+                    </svg>
+                  </div>
+                  <ul
+                    className={`dropdown-menu hidden absolute top-full mt-[2px] left-0 w-52 bg-neutral-01`}
                   >
-                    <path
-                      d="M5.2041 6.75L9.7041 11.25L14.2041 6.75"
-                      stroke-witdh="1.125"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                </a>
+                    <li className="item p-2">
+                      <a href="">Item 1</a>
+                    </li>
+                    <li className="item p-2">
+                      <a href="">Item 2</a>
+                    </li>
+                    <li className="item p-2">
+                      <a href="">Item 3</a>
+                    </li>
+                    <li className="item p-2">
+                      <a href="">Item 4</a>
+                    </li>
+                  </ul>
+                </label>
               </li>
-              <li className={` font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5
-              md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5
-              `}>
-                <a href="" className="flex flex-row gap-1 sm:justify-between md:justify-between">
+              <li
+                className={`nav-element drop-down relative flex flex-row gap-1 sm:justify-between md:justify-between lg:justify-center lg:items-center
+              `}
+              >
+                <label htmlFor="cbproduct" className="flex flex-row gap-x-2">
+                  <input
+                    type="checkbox"
+                    name="dropdown"
+                    id="cbproduct"
+                    className="hidden"
+                    // onChange={(e) => setIsProductMenuOpen(e.target.checked)}
+                  />
                   <span>Product</span>
-                  <svg
-                    className=" stroke-accent-secondary lg:size-6 sm:size-8 md:size-8"
-                    width="19"
-                    height="18"
-                    viewBox="0 0 19 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div className="svg-container flex justify-center items-center">
+                    <svg
+                      className="arrow-icon stroke-accent-secondary lg:size-6 sm:size-8 md:size-8"
+                      width="19"
+                      height="18"
+                      viewBox="0 0 19 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.2041 6.75L9.7041 11.25L14.2041 6.75"
+                        stroke-witdh="1.125"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></path>
+                    </svg>
+                  </div>
+                  <ul
+                    className={`dropdown-menu hidden absolute top-full mt-[2px] left-0 w-52 bg-neutral-01`}
                   >
-                    <path
-                      d="M5.2041 6.75L9.7041 11.25L14.2041 6.75"
-                      stroke-witdh="1.125"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                </a>
+                    <li className="item p-2">
+                      <a href="">Item 1</a>
+                    </li>
+                    <li className="item p-2">
+                      <a href="">Item 2</a>
+                    </li>
+                    <li className="item p-2">
+                      <a href="">Item 3</a>
+                    </li>
+                    <li className="item p-2">
+                      <a href="">Item 4</a>
+                    </li>
+                    <li className="item p-2">
+                      <a href="">Item 5</a>
+                    </li>
+                    <li className="item p-2">
+                      <a href="">Item 6</a>
+                    </li>
+                  </ul>
+                </label>
               </li>
-              <li className={` font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5
-              md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5
-              `}>
+              <li
+                className={`nav-element
+              `}
+              >
                 <a href="">Contact Us</a>
               </li>
             </ul>
           </div>
 
-          <div className={`bottom sm:flex sm:flex-col sm:gap-2 sm:w-full md:flex md:flex-col md:gap-2 md:w-full lg:hidden`}>
-            <div className={`cart sm:font-medium sm:text-neutral-04 sm:text-lg sm:py-4 sm:border-b sm:border-neutral-03 sm:border-solid 
+          <div
+            className={`bottom sm:flex sm:flex-col sm:gap-2 sm:w-full md:flex md:flex-col md:gap-2 md:w-full lg:hidden`}
+          >
+            <div
+              className={`cart sm:font-medium sm:text-neutral-04 sm:text-lg sm:py-4 sm:border-b sm:border-neutral-03 sm:border-solid 
               md:font-medium md:text-neutral-04 md:text-lg md:py-4 md:border-b md:border-neutral-03 md:border-solid
-              lg:hidden `}>
+              lg:hidden `}
+            >
               <a href="" className=" flex flex-row justify-between">
                 <span>Cart</span>
                 <div className="icon flex flex-row justify-center items-center gap-1">
@@ -221,9 +310,11 @@ const NavBar = () => {
               </a>
             </div>
 
-            <div className={`wish-list sm:font-medium sm:text-neutral-04 sm:text-lg sm:py-4 sm:border-b sm:border-neutral-03 sm:border-solid 
+            <div
+              className={`wish-list sm:font-medium sm:text-neutral-04 sm:text-lg sm:py-4 sm:border-b sm:border-neutral-03 sm:border-solid 
               md:font-medium md:text-neutral-04 md:text-lg md:py-4 md:border-b md:border-neutral-03 md:border-solid
-              lg:hidden `}>
+              lg:hidden `}
+            >
               <a href="" className="flex flex-row justify-between">
                 <span>Wishlist</span>
                 <div className="icon flex flex-row justify-center items-center gap-1">
@@ -267,15 +358,19 @@ const NavBar = () => {
               </a>
             </div>
 
-            <div className={`sign-in sm:w-full sm:bg-accent-secondary sm:text-neutral-01 sm:text-2xl sm:p-5 sm:rounded-md sm:text-center sm:hover:bg-accent-primary sm:transition-colors 
+            <div
+              className={`sign-in sm:w-full sm:bg-accent-secondary sm:text-neutral-01 sm:text-2xl sm:p-5 sm:rounded-md sm:text-center sm:hover:bg-accent-primary sm:transition-colors 
               md:w-full md:bg-accent-secondary md:text-neutral-01 md:text-2xl md:p-5 md:rounded-md md:text-center md:hover:bg-accent-primary md:transition-colors
-              lg:hidden `}>
+              lg:hidden `}
+            >
               <button type="button">Sign In</button>
             </div>
 
-            <div className={`social-media-icons sm:flex sm:flex-row sm:gap-6 sm:py-4
+            <div
+              className={`social-media-icons sm:flex sm:flex-row sm:gap-6 sm:py-4
               md:flex md:flex-row md:gap-6 md:py-4
-              lg:hidden `}>
+              lg:hidden `}
+            >
               <a href="">
                 <svg
                   className="size-8"
