@@ -1,7 +1,7 @@
 /* Common styles */
 
 .navitems .nav-element {
-  @apply flex justify-center items-center font-medium sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5 md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5 cursor-pointer;
+  @apply flex font-medium cursor-pointer sm:border-b sm:border-neutral-03 sm:border-solid sm:text-lg sm:py-5 md:border-b md:border-neutral-03 md:border-solid md:text-lg md:py-5 lg:justify-center lg:items-center ;
 }
 
 .navitems .nav-element.drop-down label {
