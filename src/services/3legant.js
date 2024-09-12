@@ -1,4 +1,4 @@
----
+
 import MockData from "@/utils/MockData.json";
 
 /* How to use */
@@ -68,6 +68,3 @@ export const getLatestArticles = () => {
   return latestArticles; 
 }
 
-
-
----
