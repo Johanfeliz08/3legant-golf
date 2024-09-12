@@ -1,11 +1,17 @@
-import React, { useRef } from "react";
 import { useState } from "react";
 import "@/components/styles/NavBar.css";
 
+import { getBy } from "@/services/3legant";
+
 const NavBar = () => {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const [isShopMenuOpen, setIsShopMenuOpen] = useState(false);
   // const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
+
+  // Get categories
+
+  const categories = getBy("categories")
 
   return (
     <nav
@@ -222,24 +228,23 @@ const NavBar = () => {
                   <ul
                     className={`dropdown-menu hidden absolute top-full mt-[2px] left-0 w-52 bg-neutral-01`}
                   >
-                    <li className="item p-2">
-                      <a href="">Item 1</a>
-                    </li>
-                    <li className="item p-2">
-                      <a href="">Item 2</a>
-                    </li>
-                    <li className="item p-2">
-                      <a href="">Item 3</a>
-                    </li>
-                    <li className="item p-2">
-                      <a href="">Item 4</a>
-                    </li>
-                    <li className="item p-2">
-                      <a href="">Item 5</a>
-                    </li>
-                    <li className="item p-2">
-                      <a href="">Item 6</a>
-                    </li>
+                    {
+
+                     categories.map(({id,name}) => {
+
+                      return (
+
+                        <>
+                          <li key={id} className="item p-2">
+                            <a href={`/categories/${name}`}>{name}</a>
+                          </li>
+                        </>
+
+                      )
+
+                     })
+
+                    }
                   </ul>
                 </label>
               </li>

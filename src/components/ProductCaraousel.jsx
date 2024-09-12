@@ -1,7 +1,7 @@
 import React, { useState, useRef} from "react";
 import "@/components/styles/ProductCaraousel.css";
 import CaraouselCard from "@/components/CaraouselCard";
-import { getBy } from "@/services/3legant"
+import { getBy } from "@/services/3legant.js";
 
 const ProductCaraousel = () => {
 
