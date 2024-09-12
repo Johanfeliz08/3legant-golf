@@ -13,15 +13,37 @@ const categories = getBy("categories");
   <div class="categories-container grid grid-cols-2 grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 gap-x-6 gap-y-12 lg:max-w-[1280px]">
     {
       categories.map((category) => (
-        <a href={`/categories/${category.name}`}>
+        <a id={`${category.name}`} href={`/categories/${category.name}`} class="category">
         <article class="flex flex-col justify-center items-center">
           <div class="image-container bg-neutral-03">
             <img src={category.image} alt={`${category.name} + image`}>
           </div>
-          <h3 class="font-medium text-accent-secondary p-5 md:text-md lg:text-xl">{category.name}</h3>
+          <h3 class="category-title font-medium text-accent-secondary p-5 md:text-md lg:text-xl">{category.name}</h3>
         </article>
         </a>
       ))
     }
   </div>
 </section>
+
+
+<style>
+
+
+.category:hover h3.category-title {
+
+  color:var(--accent-primary);
+  transition:color 200ms ease;
+
+}
+
+
+.category:focus h3.category-title {
+
+color:var(--accent-primary);
+transition:color 200ms ease;
+
+}
+
+
+</style>
