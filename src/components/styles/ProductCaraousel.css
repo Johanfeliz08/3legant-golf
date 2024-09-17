@@ -18,14 +18,14 @@
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
-  .hamburger-menu-container::-webkit-scrollbar {
+  .scroller::-webkit-scrollbar {
     display: none;
   }
 
   /* Hide scrollbar for IE, Edge and Firefox */
-  .hamburger-menu-container {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  .scroller {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 
   /* Pagination styles */
@@ -48,11 +48,3 @@
     }
 
   }
-
-  /* Medium screen size */
-  @media (min-width: 768px) and (max-width: 1024px) {
-
-
-
-
-  } 

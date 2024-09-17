@@ -13,20 +13,11 @@
   transition: all ease 200ms;
 }
 
+
 /* Responsive design */
 
 /* Small screen size */
 @media (max-width: 768px) {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .scroller::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .scroller {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
 
   .navitems > .nav-element:hover {
     .main-link {
