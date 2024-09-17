@@ -6,8 +6,8 @@ import { getBy } from "@/services/3legant";
 const NavBar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const [isShopMenuOpen, setIsShopMenuOpen] = useState(false);
-  // const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
+  const [isShopMenuOpen, setIsShopMenuOpen] = useState(false);
+  const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
 
   // Get categories
 
@@ -63,8 +63,8 @@ const NavBar = () => {
         <div
           className={`hamburger-menu-container ${
             isMenuOpen ? "menuisopen" : "menuisclosed"
-          } sm:flex sm:fixed sm:flex-col sm:top-0 sm:-left-[1000px]  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-dvh sm:p-8 sm:justify-between sm:items-start 
-            md:flex md:fixed md:flex-col md:top-0 md:-left-[1000px]  md:bg-neutral-01 md:z-50  md:h-screen md:p-8 md:justify-between md:items-start
+          } sm:flex sm:fixed sm:flex-col sm:top-0 sm:-left-[1000px]  sm:bg-neutral-01 sm:z-50 sm:w-[90%] sm:h-lvh sm:overflow-auto sm:p-8 sm:justify-between sm:items-start 
+            md:flex md:fixed md:flex-col md:top-0 md:-left-[1000px]  md:bg-neutral-01 md:z-50 md:h-lvh md:overflow-auto md:p-8 md:justify-between md:items-start
             md:w-[60%]
              lg:flex-row lg:gap-14 lg:justify-center lg:items-center
             `}
@@ -145,21 +145,22 @@ const NavBar = () => {
                 className={`nav-element
               `}
               >
-                <a href="/#">Home</a>
+                <a href="/#" className="main-link">Home</a>
               </li>
               <li
-                className={`nav-element drop-down relative flex flex-row gap-1 sm:justify-between md:justify-between lg:justify-center lg:items-center
+                className={`nav-element drop-down ${isShopMenuOpen ? "dropDownMenuOpen" : ""} relative flex flex-row gap-1 sm:overflow-hidden sm:justify-between md:overflow-hidden md:justify-between lg:justify-center lg:items-center
               `}
               >
-                <label htmlFor="cbshop" className="flex flex-row gap-x-2">
+                <label htmlFor="cbshop" className="flex flex-col lg:flex-row lg:gap-x-2 w-full">
                   <input
                     type="checkbox"
                     name="dropdown"
                     id="cbshop"
                     className="hidden"
-                    // onChange={(e) => setIsShopMenuOpen(e.target.checked)}
+                    onChange={(e) => setIsShopMenuOpen(e.target.checked)}
                   />
-                  <span>Shop</span>
+                  <div className="dropdown-header flex flex-row justify-between items-center w-full">
+                  <span className="dropdown-title">Shop</span>
                   <div className="svg-container flex justify-center items-center">
                     <svg
                       className="arrow-icon stroke-accent-secondary lg:size-6 sm:size-8 md:size-8"
@@ -177,53 +178,56 @@ const NavBar = () => {
                       ></path>
                     </svg>
                   </div>
+                  </div>
                   <ul
-                    className={`dropdown-menu hidden absolute top-full mt-[2px] left-0 w-52 bg-neutral-01`}
+                    className={`dropdown-menu ${isShopMenuOpen ? "" : "hidden"}  bg-neutral-01 sm:block  md:block  lg:absolute lg:top-full lg:mt-[2px] lg:left-0 lg:w-52`}
                   >
-                    <li className="item p-2">
+                    <li className="item sm:py-2 md:py-2 lg:p-2">
                       <a href="">Juniors set</a>
                     </li>
-                    <li className="item p-2">
+                    <li className="item sm:py-2 md:py-2 lg:p-2">
                       <a href="">Men's set</a>
                     </li>
-                    <li className="item p-2">
+                    <li className="item sm:py-2 md:py-2 lg:p-2">
                       <a href="">Women's set</a>
                     </li>
                   </ul>
                 </label>
               </li>
               <li
-                className={`nav-element drop-down relative flex flex-row gap-1 sm:justify-between md:justify-between lg:justify-center lg:items-center
+                className={`nav-element drop-down ${isProductMenuOpen ? "dropDownMenuOpen" : ""} relative flex flex-row gap-1 sm:overflow-hidden md:overflow-hidden sm:justify-between md:justify-between lg:justify-center lg:items-center
               `}
               >
-                <label htmlFor="cbproduct" className="flex flex-row gap-x-2">
+                <label htmlFor="cbproduct" className="flex flex-col lg:flex-row lg:gap-x-2 w-full">
                   <input
                     type="checkbox"
                     name="dropdown"
                     id="cbproduct"
                     className="hidden"
-                    // onChange={(e) => setIsProductMenuOpen(e.target.checked)}
+                    onChange={(e) => setIsProductMenuOpen(e.target.checked)}
                   />
-                  <span>Product</span>
-                  <div className="svg-container flex justify-center items-center">
-                    <svg
-                      className="arrow-icon stroke-accent-secondary lg:size-6 sm:size-8 md:size-8"
-                      width="19"
-                      height="18"
-                      viewBox="0 0 19 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.2041 6.75L9.7041 11.25L14.2041 6.75"
-                        stroke-witdh="1.125"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
+                  <div className="dropdown-header flex flex-row justify-between items-center w-full">
+                    <span className="dropdown-title">Product</span>
+                    <div className="svg-container flex justify-center items-center">
+                      <svg
+                        className="arrow-icon stroke-accent-secondary lg:size-6 sm:size-8 md:size-8"
+                        width="19"
+                        height="18"
+                        viewBox="0 0 19 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.2041 6.75L9.7041 11.25L14.2041 6.75"
+                          stroke-witdh="1.125"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
                   </div>
                   <ul
-                    className={`dropdown-menu hidden absolute top-full mt-[2px] left-0 w-52 bg-neutral-01`}
+                    className={`dropdown-menu ${isProductMenuOpen ? "" : "hidden"}  bg-neutral-01 sm:block md:block lg:absolute lg:top-full lg:mt-[2px] lg:left-0 lg:w-52`}
                   >
                     {
 
@@ -231,11 +235,11 @@ const NavBar = () => {
 
                       return (
 
-                        <>
-                          <li key={id} className="item p-2">
+                        
+                          <li key={id} className="item sm:py-2 md:py-2 lg:p-2">
                             <a href={`/categories/${name}`}>{name}</a>
                           </li>
-                        </>
+                        
 
                       )
 
@@ -249,7 +253,7 @@ const NavBar = () => {
                 className={`nav-element
               `}
               >
-                <a href="">Contact Us</a>
+                <a href="" className="main-link">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -262,11 +266,11 @@ const NavBar = () => {
               md:font-medium md:text-neutral-04 md:text-lg md:py-4 md:border-b md:border-neutral-03 md:border-solid
               lg:hidden `}
             >
-              <a href="" className=" flex flex-row justify-between">
+              <a href="" className="flex flex-row justify-between">
                 <span>Cart</span>
                 <div className="icon flex flex-row justify-center items-center gap-1">
                   <svg
-                    className="bag-icon size-7"
+                    className="bag-icon size-7 stroke-[black]"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -275,14 +279,12 @@ const NavBar = () => {
                   >
                     <path
                       d="M9 6L9 7C9 8.65685 10.3431 10 12 10C13.6569 10 15 8.65685 15 7V6"
-                      stroke="#141718"
                       stroke-witdh="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
                     <path
                       d="M15.6115 3H8.38848C6.43313 3 4.76436 4.41365 4.44291 6.3424L2.77624 16.3424C2.36988 18.7805 4.25006 21 6.72182 21H17.2781C19.7499 21 21.6301 18.7805 21.2237 16.3424L19.557 6.3424C19.2356 4.41365 17.5668 3 15.6115 3Z"
-                      stroke="#141718"
                       stroke-witdh="1.5"
                       strokeLinejoin="round"
                     />
@@ -373,9 +375,9 @@ const NavBar = () => {
               md:flex md:flex-row md:gap-6 md:py-4
               lg:hidden `}
             >
-              <a href="">
+              <a href="social-link">
                 <svg
-                  className="size-8"
+                  className="size-8 stroke-[black]"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -386,7 +388,6 @@ const NavBar = () => {
                     width="20"
                     height="20"
                     rx="4"
-                    stroke="#141718"
                     strokeWidth="1.5"
                   />
                   <circle cx="18" cy="6" r="1" fill="#141718" />
@@ -394,30 +395,29 @@ const NavBar = () => {
                     cx="12"
                     cy="12"
                     r="5"
-                    stroke="#141718"
+                    
                     strokeWidth="1.5"
                   />
                 </svg>
               </a>
-              <a href="">
+              <a href="social-link">
                 <svg
-                  className="size-8"
+                  className="size-8 stroke-[black]"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M18 3H15C12.2386 3 10 5.23858 10 8V10H6V14H10V21H14V14H18V10H14V8C14 7.44772 14.4477 7 15 7H18V3Z"
-                    stroke="#141718"
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                 </svg>
               </a>
-              <a href="">
+              <a href="social-link">
                 <svg
-                  className="size-8"
+                  className="size-8 stroke-[black]"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -428,12 +428,10 @@ const NavBar = () => {
                     width="20"
                     height="18"
                     rx="4"
-                    stroke="#141718"
                     strokeWidth="1.5"
                   />
                   <path
                     d="M10.4472 8.72361L15.2111 11.1056C15.9482 11.4741 15.9482 12.5259 15.2111 12.8944L10.4472 15.2764C9.78231 15.6088 9 15.1253 9 14.382V9.61803C9 8.87465 9.78231 8.39116 10.4472 8.72361Z"
-                    stroke="#141718"
                     strokeWidth="1.5"
                     strokeLinecap="round"
                   />

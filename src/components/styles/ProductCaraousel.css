@@ -18,12 +18,12 @@
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
-  .scroller::-webkit-scrollbar {
+  .hamburger-menu-container::-webkit-scrollbar {
     display: none;
   }
 
   /* Hide scrollbar for IE, Edge and Firefox */
-  .scroller {
+  .hamburger-menu-container {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
